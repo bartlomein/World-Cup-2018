@@ -2,7 +2,7 @@
   <div class="days">
     
      <span class="rounds" v-for="(round, index) in rounds" :key="index">
-      <div class = "june-days" >June {{days[index]}} </div>
+      <div class = "june-days" >June {{days[index]}} <hr></div>
       <span class="matches" v-for="match in round.matches" :key="match.id">
         
         <div class = "game">
@@ -49,13 +49,32 @@ export default {
   grid-column-gap: 30px;
   grid-row-gap: 10px;
   
-}
+
+  }
+  
+
 .rounds{
  padding:30px 30px 20px 30px;
 
   box-shadow:10px 10px 20px gray;
   background-color: #f9f9f9;
 
+}
+
+.rounds:nth-of-type(16){
+  display:none;
+}
+.rounds:nth-of-type(17){
+  display:none;
+}
+.rounds:nth-of-type(18){
+  display:none;
+}
+.rounds:nth-of-type(19){
+  display:none;
+}
+.rounds:nth-of-type(20){
+  display:none;
 }
 .game{
   margin-bottom: 10px;
@@ -65,5 +84,10 @@ export default {
 }
 .june-days{
   font-size:30px;
+}
+hr{
+
+
+    
 }
 </style>
