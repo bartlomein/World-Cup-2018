@@ -8,7 +8,7 @@
 import Days from './components/Days.vue'
 
 export default {
-  name: 'app',
+  name: 'days',
   components: {
     Days
   }
@@ -16,6 +16,9 @@ export default {
 </script>
 
 <style>
+body{
+background: linear-gradient(90deg, rgba(59,254,201,1) 12%, rgba(40,173,230,1) 100%);
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

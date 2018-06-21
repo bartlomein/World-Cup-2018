@@ -62,6 +62,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+
 .days {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -73,11 +75,16 @@ export default {
 }
 
 .rounds {
+  
   padding: 30px 30px 20px 30px;
   margin: 10px;
   box-shadow: 10px 10px 20px gray;
   background-color: #f9f9f9;
+  border-radius:10px;
 }
+
+
+
 
 .rounds:nth-of-type(16) {
   display: none;
