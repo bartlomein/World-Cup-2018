@@ -1,7 +1,7 @@
 <template>
   <div class="days">
     
-     <span class="rounds" v-for="(round, index) in rounds" >
+     <span class="rounds" v-for="(round, index) in rounds" :key="index">
       <div class = "june-days" >June {{days[index]}} </div>
       <span class="matches" v-for="match in round.matches" :key="match.id">
         
