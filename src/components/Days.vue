@@ -1,10 +1,14 @@
 <template>
   <div class="days">
-
-     <span class="rounds" v-for="round in rounds">
-      <span class="matches" v-for="match in round.matches">
-        <div class = "date"> {{match.date}}</div>
-       <div class = "first-team" >{{match.team1.name}}: <span class = "score">{{match.score1}}</span> </div> <div class = "second-team">{{match.team2.name}}: <span class = "score">{{match.score2}}</span> </div>
+    
+     <span class="rounds" v-for="(round, index) in rounds" >
+      <div class = "june-days" >June {{days[index]}} </div>
+      <span class="matches" v-for="match in round.matches" :key="match.id">
+        
+        <div class = "game">
+       <div class = "first-team" >{{match.team1.name}}: <span class = "score">{{match.score1}}</span> </div> <div class = "second-team">{{match.team2.name}}: <span class = "score">{{match.score2}}</span> 
+       </div>
+       </div>
        </span>
      </span>
 
@@ -19,8 +23,10 @@ export default {
 
   data() {
     return {
-      rounds: []
+      rounds: [],
+      days: [14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28],
     };
+   
   },
   mounted() {
     axios
@@ -34,9 +40,14 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.rounds {
+.days {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-auto-rows: minmax(100px, auto);
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: minmax(100px, auto);
+  text-align: left;
+}
+
+.game{
+  margin-bottom: 10px;
 }
 </style>
