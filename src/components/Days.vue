@@ -42,12 +42,25 @@ export default {
 <style scoped>
 .days {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: minmax(100px, auto);
   text-align: left;
+  padding:20px;
+  
 }
+.rounds{
+  padding:40px;
 
+  box-shadow:10px 10px 20px gray;
+
+}
 .game{
   margin-bottom: 10px;
+}
+.score{
+  font-weight: 500;
+}
+.june-days{
+  font-size:30px;
 }
 </style>
