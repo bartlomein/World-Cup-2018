@@ -45,13 +45,16 @@ export default {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: minmax(100px, auto);
   text-align: left;
-  padding:20px;
+  
+  grid-column-gap: 30px;
+  grid-row-gap: 10px;
   
 }
 .rounds{
-  padding:40px;
+ padding:30px 30px 20px 30px;
 
   box-shadow:10px 10px 20px gray;
+  background-color: #f9f9f9;
 
 }
 .game{
