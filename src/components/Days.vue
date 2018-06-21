@@ -1,42 +1,40 @@
 <template>
-  <div class="days">
-    
-     <span class="rounds" v-for="(round, index) in rounds" :key="index">
-      <div class = "june-days" >June {{days[index]}} <hr></div>
+<div class="days">
+   <span class="rounds" v-for="(round, index) in rounds" :key="index">
+      <div class = "june-days" >
+         June {{days[index]}} 
+         <hr>
+      </div>
+      <div class = "all-matches">
       <span class="matches" v-for="match in round.matches" :key="match.id">
-        
-            <div class="game" v-if="match.score1>match.score2">
-                <div class="first-team bold">{{match.team1.name}}:
-                    <span class="score bold">{{match.score1}}</span>
-                </div>
-                <div class="second-team">{{match.team2.name}}:
-                    <span class="score">{{match.score2}}</span>
-                </div>
-                
+         <div class="game" v-if="match.score1>match.score2">
+            <div class="first-team bold">{{match.team1.name}}:
+               <span class="score bold">{{match.score1}}</span>
             </div>
-                        <div class="game" v-else-if="match.score1<match.score2">
-                <div class="first-team ">{{match.team1.name}}:
-                    <span class="score">{{match.score1}}</span>
-                </div>
-                <div class="second-team bold">{{match.team2.name}}:
-                    <span class="score bold">{{match.score2}}</span>
-                </div>
-                
+            <div class="second-team">{{match.team2.name}}:
+               <span class="score">{{match.score2}}</span>
             </div>
-                        <div class="game" v-else>
-                <div class="first-team ">{{match.team1.name}}:
-                    <span class="score">{{match.score1}}</span>
-                </div>
-                <div class="second-team ">{{match.team2.name}}:
-                    <span class="score">{{match.score2}}</span>
-                </div>
-                
+         </div>
+         <div class="game" v-else-if="match.score1<match.score2">
+            <div class="first-team ">{{match.team1.name}}:
+               <span class="score">{{match.score1}}</span>
             </div>
-       </span>
-     </span>
-
-
-  </div>
+            <div class="second-team bold">{{match.team2.name}}:
+               <span class="score bold">{{match.score2}}</span>
+            </div>
+         </div>
+         <div class="game" v-else>
+            <div class="first-team ">{{match.team1.name}}:
+               <span class="score">{{match.score1}}</span>
+            </div>
+            <div class="second-team ">{{match.team2.name}}:
+               <span class="score">{{match.score2}}</span>
+            </div>
+         </div>
+      </span>
+      </div>
+   </span>
+</div>
 </template>
 
 <script>
@@ -66,11 +64,11 @@ export default {
 
 .days {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: minmax(100px, auto);
   text-align: left;
 
-  grid-column-gap: 20px;
+  grid-column-gap: 10px;
   grid-row-gap: 10px;
 }
 
@@ -82,8 +80,21 @@ export default {
   background-color: #f9f9f9;
   border-radius:10px;
 }
+.all-matches{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5px;
+  
 
+}
 
+.game{
+  border:solid 1px #D3D3D3;
+  box-shadow: 1px 1px 5px gray;
+  padding:5px;
+  border-radius:5px;
+  font-size:16px;
+}
 
 
 .rounds:nth-of-type(16) {
