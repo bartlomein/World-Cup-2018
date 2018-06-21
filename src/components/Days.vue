@@ -1,14 +1,14 @@
 <template>
   <div class="days">
-    <div class = "day-one">
-      <div> June 14</div>
-     <div class="rounds" v-for="round in rounds">
-      <div class="matches" v-for="match in round.matches">
-       <div class= "date">{{match.team1.name}} </div>
-       </div>
 
-        </div>
-      </div>
+     <span class="rounds" v-for="round in rounds">
+      <span class="matches" v-for="match in round.matches">
+        <div class = "date"> {{match.date}}</div>
+       <div class = "first-team" >{{match.team1.name}}: <span class = "score">{{match.score1}}</span> </div> <div class = "second-team">{{match.team2.name}}: <span class = "score">{{match.score2}}</span> </div>
+       </span>
+     </span>
+
+
   </div>
 </template>
 
@@ -19,7 +19,7 @@ export default {
 
   data() {
     return {
-      rounds: [],
+      rounds: []
     };
   },
   mounted() {
@@ -34,9 +34,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.days {
-  display:grid;
-  grid-template-columns: repeat(4, 1fr);
+.rounds {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   grid-auto-rows: minmax(100px, auto);
 }
 </style>
