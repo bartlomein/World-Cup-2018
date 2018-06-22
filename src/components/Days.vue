@@ -1,6 +1,9 @@
 <template>
 <div class="days">
    <span class="rounds" v-for="(round, index) in rounds" :key="index">
+     <modal name="hello-world">
+  hello, world!
+</modal>
       <div class = "june-days" >
          June {{days[index]}} 
          <hr>
@@ -34,7 +37,9 @@
       </span>
       </div>
    </span>
+   
 </div>
+
 </template>
 
 <script>
@@ -54,7 +59,15 @@ export default {
         "https://raw.githubusercontent.com/openfootball/world-cup.json/master/2018/worldcup.json"
       )
       .then(response => (this.rounds = response.data.rounds));
+  },
+  methods: {
+  show () {
+    this.$modal.show('hello-world');
+  },
+  hide () {
+    this.$modal.hide('hello-world');
   }
+}
 };
 </script>
 
