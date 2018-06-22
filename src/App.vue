@@ -8,6 +8,7 @@
 <script>
 import Days from './components/Days.vue'
 
+
 export default {
   name: 'days',
   components: {
