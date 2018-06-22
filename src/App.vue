@@ -18,7 +18,7 @@ export default {
 
 <style>
 body{
-background: linear-gradient(90deg, rgba(59,254,201,1) 12%, rgba(40,173,230,1) 100%);
+background: linear-gradient(315deg,#fc00aa,#00dbde)
 }
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -30,19 +30,24 @@ background: linear-gradient(90deg, rgba(59,254,201,1) 12%, rgba(40,173,230,1) 10
 }
 
 .title-header{
-
+  position:absolute;
+  top:0;
    background-color: #f9f9f9;
   border-radius:10px;
-  padding:20px;
+  padding:10px 25px 10px 25px;
   max-width:400px;
   margin:0 auto;
-  box-shadow: 10px 10px 20px gray;
+  box-shadow: 5px 5px 20px gray;
+  background: linear-gradient(to right, rgb(69, 127, 202), rgb(86, 145, 200));
+  color:white;
 }
 h1{
   font-size:40px;
   margin:10px;
+  font-weight: bold;
 }
 h2{
   margin:10px;
+  font-weight:bold;
 }
 </style>

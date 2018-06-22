@@ -76,9 +76,9 @@ export default {
   
   padding: 30px 30px 20px 30px;
   margin: 10px;
-  box-shadow: 10px 10px 20px gray;
+  box-shadow:0 4px 36px rgba(50,50,93,.11), 0 1px 33px rgba(0,0,0,.08);
   background-color: #f9f9f9;
-  border-radius:10px;
+  border-radius:5px;
 }
 .all-matches{
   display:grid;
@@ -90,13 +90,18 @@ export default {
 
 .game{
   border:solid 1px #D3D3D3;
-  box-shadow: 1px 1px 5px gray;
+  background-color:#4db3ff;
+  box-shadow:0 4px 8px rgba(32,160,255,.3);
   padding:5px;
-  border-radius:5px;
+  border-radius:3px;
   font-size:16px;
+  color:white;
 }
 
-
+.rounds:first-of-type{
+  height:130px;
+  padding-top:120px;
+}
 .rounds:nth-of-type(16) {
   display: none;
 }
@@ -121,6 +126,7 @@ export default {
 }
 .bold {
   font-weight: bold;
+  font-size:17px;
 }
 
 .tie-color {
