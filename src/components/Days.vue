@@ -102,8 +102,8 @@ export default {
 }
 
 .rounds:first-of-type{
-  height:135px;
-  padding-top:130px;
+  height:140px;
+  padding-top:105px;
 }
 .rounds:nth-of-type(16) {
   display: none;
