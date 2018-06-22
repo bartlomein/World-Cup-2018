@@ -64,7 +64,7 @@ export default {
 
 .days {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-template-rows: minmax(100px, auto);
   text-align: left;
 
@@ -100,7 +100,7 @@ export default {
 
 .rounds:first-of-type{
   height:130px;
-  padding-top:120px;
+  padding-top:105px;
 }
 .rounds:nth-of-type(16) {
   display: none;

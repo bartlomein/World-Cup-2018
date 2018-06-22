@@ -31,10 +31,10 @@ background: linear-gradient(315deg,#fc00aa,#00dbde)
 
 .title-header{
   position:absolute;
-  top:0;
+  top:5px;
    background-color: #f9f9f9;
   border-radius:10px;
-  padding:10px 25px 10px 25px;
+  padding:10px 40px 10px 40px;
   max-width:400px;
   margin:0 auto;
   box-shadow: 5px 5px 20px gray;
@@ -42,12 +42,12 @@ background: linear-gradient(315deg,#fc00aa,#00dbde)
   color:white;
 }
 h1{
-  font-size:40px;
-  margin:10px;
+  font-size:38px;
+  margin:5px;
   font-weight: bold;
 }
 h2{
-  margin:10px;
+  margin:5px;
   font-weight:bold;
 }
 </style>
