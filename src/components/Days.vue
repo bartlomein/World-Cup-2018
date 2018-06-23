@@ -9,7 +9,7 @@
       <div class = "all-matches">
       <span class="matches"  v-for="match in round.matches" :key="match.id">
         
-         <div class="game" @click="show(), sendData(match)" v-if="match.score1>match.score2">
+         <div class="game" @click="sendData(match), show()" v-if="match.score1>match.score2">
             <div class="first-team bold">{{match.team1.name}}:
                <span class="score bold">{{match.score1}}</span>
                
@@ -20,7 +20,7 @@
             </div>
 
          </div>
-         <div class="game" @click="show(),sendData(match)" v-else-if="match.score1<match.score2">
+         <div class="game" @click="sendData(match), show()" v-else-if="match.score1<match.score2">
             <div class="first-team ">{{match.team1.name}}:
                <span class="score">{{match.score1}}</span>
                
@@ -30,7 +30,7 @@
             </div>
 
          </div>
-         <div class="game" @click="show(),sendData(match)" v-else>
+         <div class="game" @click="sendData(match), show()" v-else>
             <div class="first-team ">{{match.team1.name}}:
                <span class="score">{{match.score1}}</span>
             </div>
@@ -42,11 +42,33 @@
       </span>
       </div>
    </span>
- <modal name="detailview" >
-<div class="modal-details">
-  
-  {{details.city}}
+
+
+ <modal name="detailview"  classes="detail-modal">
+<div class="modal-details" v-if= "match">
+  <div class = "detail-group">{{match.group}}</div>
+  <div class = "modal-names-and-scores">
+     <div class= "modal-team-one"> <div class = "modal-team-name">{{ match.team1.name }} </div>
+        <div class = "score-one-goals" v-for="goal in match.goals1">
+         <span class = "scorer-name"> {{goal.name}}</span>,  <span class = "scorer-minute">{{goal.minute}}'</span>
+          </div>
+       </div> 
+       <div class="modal-score-one"> {{match.score1}}
+        
+       </div> 
+      <div class= "modal-score-two">{{match.score2}} </div> 
+      <div class = "modal-team-two"> <div class = "modal-team-name"> {{ match.team2.name }} </div>
+        <div class = "score-two-goals" v-for="goal in match.goals2">
+          {{goal.name}} {{goal.minute}}'
+          </div>
+          
+      </div>
+
+
   </div>
+  <div class = "modal-city">City: {{match.city}}</div>
+  </div>
+  
 
 </modal>
 </div>
@@ -65,7 +87,7 @@ export default {
     return {
       rounds: [],
       days: [14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28],
-      details: [],
+      match:null,
 
 
 
@@ -77,17 +99,20 @@ export default {
         "https://raw.githubusercontent.com/openfootball/world-cup.json/master/2018/worldcup.json"
       )
       .then(response => (this.rounds = response.data.rounds));
+
+
+    
   },
    methods: {
-  show (match) {
-    this.$modal.show('detailview', { foo: 'bar' });
+  show () {
+    this.$modal.show('detailview');
   },
   hide () {
     this.$modal.hide('detailview');
    },
    sendData(match){
-     this.details = match;
-     console.log(match)
+     this.match = match;
+
    }
   },
 
@@ -98,7 +123,7 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+
 <style scoped>
 
 
@@ -128,6 +153,11 @@ export default {
 
 }
 
+.game:hover{
+  background-color:rgba(32,160,255,1);
+  cursor:pointer;
+}
+
 .game{
   border:solid 1px #D3D3D3;
   background-color:#4db3ff;
@@ -137,12 +167,74 @@ export default {
   font-size:16px;
   color:white;
 }
+/*MODAL*/
+.modal-names-and-scores{
+  font-size:30px;
+  text-align:center;
+  color:white;
+  display:grid;
+
+  grid-template-columns: 1.5fr 0.5fr 0.5fr 1.5fr;
+
+  font-weight:bold;
+}
 
 .modal-details{
-  padding:10px;
-  display:grid;
-  grid-template-columns: 1fr 1fr;
+  padding:30px;
+
+  background-color: #27E3E7;
+  box-shadow:10px 4px 36px rgba(50,50,93,.11), 0 1px 33px rgba(0,0,0,.08);
+  border-radius:10px;
+  max-width:80%;
+  margin:0 auto;
+
+
 }
+.modal-city{
+  text-align:center;
+  font-size:18px;
+  color:white;
+  margin-top:50px;
+}
+
+.detail-group{
+  display:flex;
+  justify-content: center;
+  color:white;
+  font-size:24px;
+}
+
+.score-one-goals{
+  font-size:14px;
+
+
+  text-align:left;
+}
+.score-two-goals{
+  font-size:14px;
+
+
+  text-align:right;
+}
+
+.modal-team-name{
+  margin-bottom:10px;
+
+}
+.modal-team-one{
+  text-align:left;
+}
+.modal-team-two{
+  text-align:right;
+}
+
+
+
+
+
+
+
+
 
 .rounds:first-of-type{
   height:140px;
