@@ -66,7 +66,12 @@
 
 
   </div>
-  <div class = "modal-city">City: {{match.city}}</div>
+  <div class = "modal-time">Time: {{match.time}} UTC
+    <div class = "modal-city">City: {{match.city}}</div>
+  
+  </div>
+
+
   </div>
   
 
@@ -159,7 +164,7 @@ export default {
 }
 
 .game{
-  border:solid 1px #D3D3D3;
+
   background-color:#4db3ff;
   box-shadow:0 4px 8px rgba(32,160,255,.3);
   padding:5px;
@@ -169,7 +174,7 @@ export default {
 }
 /*MODAL*/
 .modal-names-and-scores{
-  font-size:30px;
+  font-size:36px;
   text-align:center;
   color:white;
   display:grid;
@@ -182,19 +187,25 @@ export default {
 .modal-details{
   padding:30px;
 
-  background-color: #27E3E7;
-  box-shadow:10px 4px 36px rgba(50,50,93,.11), 0 1px 33px rgba(0,0,0,.08);
+  background-color: #88D8BF;
+  box-shadow:10px 10px 30px rgba(50,50,93,.11), 0 1px 33px rgba(0,0,0,.08);
   border-radius:10px;
   max-width:80%;
   margin:0 auto;
 
 
 }
-.modal-city{
+.modal-time{
   text-align:center;
   font-size:18px;
   color:white;
   margin-top:50px;
+  font-weight:bold;
+}
+.modal-city{
+  font-size:20px;
+  font-weight:400;
+  
 }
 
 .detail-group{
