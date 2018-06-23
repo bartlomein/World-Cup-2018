@@ -3,43 +3,60 @@
    <span class="rounds" v-for="(round, index) in rounds" :key="index">
       <div class = "june-days" >
          June {{days[index]}} 
+
          <hr>
       </div>
       <div class = "all-matches">
-      <span class="matches" v-for="match in round.matches" :key="match.id">
-         <div class="game" v-if="match.score1>match.score2">
+      <span class="matches"  v-for="match in round.matches" :key="match.id">
+        
+         <div class="game" @click="show(), sendData(match)" v-if="match.score1>match.score2">
             <div class="first-team bold">{{match.team1.name}}:
                <span class="score bold">{{match.score1}}</span>
+               
             </div>
             <div class="second-team">{{match.team2.name}}:
                <span class="score">{{match.score2}}</span>
+      
             </div>
+
          </div>
-         <div class="game" v-else-if="match.score1<match.score2">
+         <div class="game" @click="show(),sendData(match)" v-else-if="match.score1<match.score2">
             <div class="first-team ">{{match.team1.name}}:
                <span class="score">{{match.score1}}</span>
+               
             </div>
             <div class="second-team bold">{{match.team2.name}}:
                <span class="score bold">{{match.score2}}</span>
             </div>
+
          </div>
-         <div class="game" v-else>
+         <div class="game" @click="show(),sendData(match)" v-else>
             <div class="first-team ">{{match.team1.name}}:
                <span class="score">{{match.score1}}</span>
             </div>
             <div class="second-team ">{{match.team2.name}}:
                <span class="score">{{match.score2}}</span>
             </div>
+
          </div>
       </span>
       </div>
    </span>
+ <modal name="detailview" >
+<div class="modal-details">
+  
+  {{details.city}}
+  </div>
+
+</modal>
 </div>
+
 </template>
 
 <script>
 
 import axios from "axios";
+
 
 export default {
   //https://raw.githubusercontent.com/openfootball/world-cup.json/master/2018/worldcup.json
@@ -47,7 +64,11 @@ export default {
   data() {
     return {
       rounds: [],
-      days: [14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28]
+      days: [14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28],
+      details: [],
+
+
+
     };
   },
   mounted() {
@@ -57,6 +78,22 @@ export default {
       )
       .then(response => (this.rounds = response.data.rounds));
   },
+   methods: {
+  show (match) {
+    this.$modal.show('detailview', { foo: 'bar' });
+  },
+  hide () {
+    this.$modal.hide('detailview');
+   },
+   sendData(match){
+     this.details = match;
+     console.log(match)
+   }
+  },
+
+
+
+
   
 };
 </script>
@@ -99,6 +136,12 @@ export default {
   border-radius:3px;
   font-size:16px;
   color:white;
+}
+
+.modal-details{
+  padding:10px;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .rounds:first-of-type{

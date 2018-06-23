@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <div class = "title-header"><h1>World Cup 2018<br> </h1><h2>Group Stage</h2></div>
+
     <Days/>
   </div>
 </template>
@@ -9,11 +10,12 @@
 import Days from './components/Days.vue'
 
 
+
 export default {
   name: 'days',
   components: {
     Days
-  }
+  },
 }
 </script>
 
