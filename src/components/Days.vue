@@ -66,7 +66,7 @@
 
 
   </div>
-  <div class = "modal-time">Time: {{match.time}} UTC
+  <div class = "modal-time">Time: {{match.time}}  {{match.timezone}}
     <div class = "modal-city">City: {{match.city}}</div>
   
   </div>
@@ -134,7 +134,7 @@ export default {
 
 .days {
   display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-template-rows: minmax(100px, auto);
   text-align: left;
 
@@ -188,7 +188,7 @@ export default {
   padding:30px;
 
   background-color: #88D8BF;
-  box-shadow:10px 10px 30px rgba(50,50,93,.11), 0 1px 33px rgba(0,0,0,.08);
+
   border-radius:10px;
   max-width:80%;
   margin:0 auto;
@@ -199,7 +199,7 @@ export default {
   text-align:center;
   font-size:18px;
   color:white;
-  margin-top:50px;
+  margin-top:30px;
   font-weight:bold;
 }
 .modal-city{
