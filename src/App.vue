@@ -1,8 +1,11 @@
 <template>
   <div id="app">
-    <div class = "title-header"><h1>World Cup 2018<br> </h1><h2>Group Stage</h2></div>
+    <div class = "title-header"><h1><router-link to="/">World Cup 2018</router-link><br> </h1><h2>  Stages: <router-link to="/group">Group</router-link><span> </span> <router-link to="/knockout">Knockout</router-link></h2></div>
 
-    <Days/>
+
+       
+
+ <router-view/>
   </div>
 </template>
 

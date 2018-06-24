@@ -1,4 +1,5 @@
 <template>
+<Days>
 <div class="days">
    <span class="rounds" v-for="(round, index) in rounds" :key="index">
       <div class = "june-days" >
@@ -77,7 +78,7 @@
 
 </modal>
 </div>
-
+</Days>
 </template>
 
 <script>
