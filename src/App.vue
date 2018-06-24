@@ -21,7 +21,7 @@ export default {
 
 <style>
 body{
-background: linear-gradient(315deg,#fc00aa,#00dbde)
+background: linear-gradient(315deg,#fc99ba,#00dbde)
 }
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
