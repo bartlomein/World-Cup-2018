@@ -44,7 +44,7 @@
    </span>
 
 
- <modal name="detailview"  classes="detail-modal">
+ <modal name="detailview"  classes="detail-modal" :adaptive="true">
 <div class="modal-details" v-if= "match">
   <div class = "detail-group">{{match.group}}</div>
   <div class = "modal-names-and-scores">
@@ -190,7 +190,7 @@ export default {
   background-color: #88D8BF;
 
   border-radius:10px;
-  max-width:80%;
+  
   margin:0 auto;
 
 
@@ -281,4 +281,12 @@ export default {
 .tie-color {
   color: red;
 }
+
+@media screen and (max-width: 400px){
+.detail-modal{
+    max-width:90% !important;
+  }
+}
+
+
 </style>

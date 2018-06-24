@@ -53,4 +53,15 @@ h2{
   margin:5px;
   font-weight:bold;
 }
+@media screen and (max-width: 370px){
+
+  .title-header h1{
+    font-size:34px;
+  }
+}
+
+
+
+
+
 </style>
