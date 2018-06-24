@@ -1,8 +1,9 @@
 <template>
      <div class="home">
-    <h1>This is an home page</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ali...</p>
-  </div>
+         <div class = "welcome"> <h1>Welcome to my page about the 2018 World Cup</h1></div>
+         
+   
+</div>
 </template>
 
 
@@ -15,5 +16,22 @@ export default {
 
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css?family=Shrikhand');
+.home{
+       height:100vh;
+    
+}
+.welcome{
+display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top:140px;
+}
+.welcome h1{
+    color:white;
+    font-family: 'Shrikhand', cursive;
+    font-weight:100;
+    font-size:50px;
 
+}
 </style>

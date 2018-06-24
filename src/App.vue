@@ -10,15 +10,12 @@
 </template>
 
 <script>
-import Days from './components/Days.vue'
+
 
 
 
 export default {
-  name: 'days',
-  components: {
-    Days
-  },
+
 }
 </script>
 
@@ -33,6 +30,8 @@ background: linear-gradient(315deg,#fc00aa,#00dbde)
   text-align: center;
   color: #2c3e50;
   margin-top: 20px;
+
+
 }
 
 .title-header{
@@ -48,13 +47,25 @@ background: linear-gradient(315deg,#fc00aa,#00dbde)
   color:white;
 }
 h1{
-  font-size:38px;
+  font-size:32px;
   margin:5px;
   font-weight: bold;
 }
 h2{
   margin:5px;
   font-weight:bold;
+}
+.title-header a{
+  margin-left:5px;
+  margin-right:5px;
+  padding:5px;
+  color:white;
+  text-decoration: none;
+
+}
+
+.title-header a:hover{
+
 }
 @media screen and (max-width: 370px){
 
