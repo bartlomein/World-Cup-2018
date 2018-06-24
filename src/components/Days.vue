@@ -44,13 +44,13 @@
    </span>
 
 
- <modal name="detailview"  classes="detail-modal" :adaptive="true">
+ <modal name="detailview"  classes="detail-modal" :adaptive="true" :maxHeight="800">
 <div class="modal-details" v-if= "match">
   <div class = "detail-group">{{match.group}}</div>
   <div class = "modal-names-and-scores">
      <div class= "modal-team-one"> <div class = "modal-team-name">{{ match.team1.name }} </div>
         <div class = "score-one-goals" v-for="goal in match.goals1">
-         <span class = "scorer-name"> {{goal.name}}</span>,  <span class = "scorer-minute">{{goal.minute}}'</span>
+         <div class = "scorer-name"> {{goal.name}} <span class = "scorer-minute">{{goal.minute}}'</span></div>
           </div>
        </div> 
        <div class="modal-score-one"> {{match.score1}}
@@ -190,7 +190,7 @@ export default {
   background-color: #88D8BF;
 
   border-radius:10px;
-  
+
   margin:0 auto;
 
 
@@ -287,6 +287,16 @@ export default {
     max-width:90% !important;
   }
 }
-
+@media screen and (max-width: 500px){
+.modal-names-and-scores{
+    font-size:26px;
+  }
+  .modal-time{
+    font-size:16px;
+  }
+  .modal-city{
+    font-size:18px;
+  }
+}
 
 </style>
