@@ -30,9 +30,6 @@ export default {
 
 .home{
        height:100vh;
-
-       
-    
 }
 .logo1 img{
     position: absolute;
@@ -43,7 +40,7 @@ export default {
 }
 .welcome{
     z-index: 9999;
-background: url('../assets/polishfans5.png');
+background: url('../assets/polishfans10.png');
 background-size: cover;
 display:flex;
 justify-content: center;

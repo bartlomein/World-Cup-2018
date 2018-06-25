@@ -1,6 +1,6 @@
 <template>
 
-<div class="days page">
+<div class="days">
    <span class="rounds" v-for="(round, index) in rounds" :key="index">
       <div class = "june-days" >
          June {{days[index]}} 
@@ -99,7 +99,7 @@ export default {
 
     };
   },
-  mounted() {
+  beforeMount() {
     axios
       .get(
         "https://raw.githubusercontent.com/openfootball/world-cup.json/master/2018/worldcup.json"

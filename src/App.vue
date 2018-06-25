@@ -4,8 +4,9 @@
 
 
        
-  
+  <transition name="fade">
  <router-view/>
+ </transition>
   </div>
 </template>
 
@@ -45,6 +46,7 @@ background: linear-gradient(315deg,#fc99ba,#00dbde)
   box-shadow: 5px 5px 20px gray;
   background: linear-gradient(to right, rgb(69, 127, 202), rgb(86, 145, 200));
   color:white;
+  z-index: 999999999999;
 }
 h1{
   font-size:32px;
@@ -72,6 +74,18 @@ h2{
   .title-header h1{
     font-size:34px;
   }
+}
+.fade-enter-active, .fade-leave-active {
+  transition-property: opacity;
+  transition-duration: .25s;
+}
+
+.fade-enter-active {
+  transition-delay: .25s;
+}
+
+.fade-enter, .fade-leave-active {
+  opacity: 0
 }
 
 
