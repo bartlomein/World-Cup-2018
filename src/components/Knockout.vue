@@ -1,5 +1,5 @@
 <template>
-     <div class="knockout">
+     <div class="knockout page">
     <h1>knocout</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ali...</p>
     <main id="tournament">

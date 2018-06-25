@@ -1,5 +1,5 @@
 <template>
-     <div class="home">
+     <div class="home page">
 
 
          <div class = "welcome"> 
@@ -64,4 +64,5 @@ color:white;
     font-size:80px;
 
 }
+
 </style>

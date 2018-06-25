@@ -4,7 +4,7 @@
 
 
        
-
+  
  <router-view/>
   </div>
 </template>
