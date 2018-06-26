@@ -9,10 +9,12 @@
   </div>
   <div class="tournament__grid">
     <!-- tournament__round 1/8 -->
+    
     <div class="tournament__round tournament__round--first-round">
+        <div>Round of 16</div>
       <div class="tournament__match">
-        <a class="tournament__match__team" >Lorem ipsum.</a>
-        <a class="tournament__match__team" >Lorem ipsum.</a>
+        <a class="tournament__match__team" >TEAM1</a>
+        <a class="tournament__match__team" >Lorem ipsum</a>
       </div>
       <div class="tournament__match">
         <a class="tournament__match__team" >Lorem ipsum.</a>
@@ -97,7 +99,30 @@
 
 
 <script>
+import axios from "axios";
 export default {
+  //https://raw.githubusercontent.com/openfootball/world-cup.json/master/2018/worldcup.json
+
+    //{{rounds[16].matches[1].team1.name}}
+  data() {
+    return {
+      rounds: [],
+      match:null,
+
+
+
+    };
+  },
+  beforeMount() {
+    axios
+      .get(
+        "https://raw.githubusercontent.com/openfootball/world-cup.json/master/2018/worldcup.json"
+      )
+      .then(response => (this.rounds = response.data.rounds));
+
+
+    
+  },
     
 }
 </script>
@@ -117,7 +142,9 @@ export default {
 body {
   background: #383738;
 }
+
 .tournament {
+    margin-top:30px;
   position: relative;
   min-height: 300px;
   padding: 30px 0 0;
@@ -125,7 +152,10 @@ body {
 .tournament__grid {
   font-size: 0;
   line-height: 0;
-  display: flex;
+  display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-rows: minmax(100px, auto);
+
   align-items: stretch;
   min-height: 400px;
 }
@@ -160,7 +190,7 @@ body {
   position: absolute;
   right: 0;
   width: 2px;
-  background: rgba(0, 0, 0, .2);
+  background: white;
   top: 25%;
   bottom: 25%;
 }
@@ -168,17 +198,21 @@ body {
   display: none;
 }
 .tournament__match__team {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: bold;
   transition: color 0.3s ease;
-  color: #ccc;
+  color: #FF4136;
   text-decoration: none;
   box-sizing: border-box;
-  background: rgba(0, 0, 0, .2);
-  display: block;
+  background-color:#001f3f;
+  box-shadow:10px 10px 20px gray;
+    border-radius:10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
-  width: auto;
-  height: 32px;
+  width: 200px;;
+  height: 40px;
   line-height: 32px;
   padding: 0 36px 0 36px;
   margin: auto;
@@ -193,7 +227,7 @@ body {
   width: 999px;
   height: 2px;
   margin-top: -1px;
-  background: rgba(0, 0, 0, .2);
+  background: white;
 }
 .tournament__match__team:after {
   left: 100%;
