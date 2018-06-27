@@ -1,6 +1,6 @@
 <template>
      <div class="knockout">
-    <h1>Knockout Stage</h1>
+    <h1></h1>
 
     <div class="tournament">
   <!-- tournament logo -->
@@ -11,84 +11,88 @@
     <!-- tournament__round 1/8 -->
     
     <div class="tournament__round tournament__round--first-round">
-        <div>Round of 16</div>
+        <div class = "label"><h2>Round of 16</h2></div>
       <div class="tournament__match">
-        <a class="tournament__match__team" >TEAM1</a>
-        <a class="tournament__match__team" >Lorem ipsum</a>
+        <a class="tournament__match__team" >TBD</a>
+        <a class="tournament__match__team" >TBD</a>
       </div>
       <div class="tournament__match">
-        <a class="tournament__match__team" >Lorem ipsum.</a>
-        <a class="tournament__match__team" >Lorem ipsum.</a>
+        <a class="tournament__match__team" >TBD</a>
+        <a class="tournament__match__team" >TBD</a>
       </div>
       <div class="tournament__match">
-        <a class="tournament__match__team" >Lorem ipsum.</a>
-        <a class="tournament__match__team" >Lorem ipsum.</a>
+        <a class="tournament__match__team" >TBD</a>
+        <a class="tournament__match__team" >TBD</a>
       </div>
       <div class="tournament__match">
-        <a class="tournament__match__team" >Lorem ipsum.</a>
-        <a class="tournament__match__team" >Lorem ipsum.</a>
+        <a class="tournament__match__team" >TBD</a>
+        <a class="tournament__match__team" >TBD</a>
       </div>
       <div class="tournament__match">
-        <a class="tournament__match__team" >Lorem ipsum.</a>
-        <a class="tournament__match__team" >Lorem ipsum.</a>
+        <a class="tournament__match__team" >TBD</a>
+        <a class="tournament__match__team" >TBD</a>
       </div>
       <div class="tournament__match">
-        <a class="tournament__match__team" >Lorem ipsum.</a>
-        <a class="tournament__match__team" >Lorem ipsum.</a>
+        <a class="tournament__match__team" >TBD</a>
+        <a class="tournament__match__team" >TBD</a>
       </div>
       <div class="tournament__match">
-        <a class="tournament__match__team" >Lorem ipsum.</a>
-        <a class="tournament__match__team" >Lorem ipsum.</a>
+        <a class="tournament__match__team" >TBD</a>
+        <a class="tournament__match__team" >TBD</a>
       </div>
       <div class="tournament__match">
-        <a class="tournament__match__team" >Lorem ipsum.</a>
-        <a class="tournament__match__team" >Lorem ipsum.</a>
+        <a class="tournament__match__team" >TBD</a>
+        <a class="tournament__match__team" >TBD</a>
       </div>
     </div>
 
     <div class="tournament__round tournament__round--first-round">
+      <div class = "label"><h2>Quarterfinal</h2></div>
       <div class="tournament__match tournament__match">
-        <a class="tournament__match__team" >Lorem ipsum.</a>
-        <a class="tournament__match__team" >1 Lorem ipsum.</a>
+        <a class="tournament__match__team" >TBD</a>
+        <a class="tournament__match__team" >TBD</a>
       </div>
       <div class="tournament__match">
-        <a class="tournament__match__team" >Lorem ipsum.</a>
-        <a class="tournament__match__team" >Lorem ipsum.</a>
+        <a class="tournament__match__team" >TBD</a>
+        <a class="tournament__match__team" >TBD</a>
       </div>
       <div class="tournament__match">
-        <a class="tournament__match__team" >Lorem ipsum.</a>
-        <a class="tournament__match__team" >Lorem ipsum.</a>
+        <a class="tournament__match__team" >TBD</a>
+        <a class="tournament__match__team" >TBD</a>
       </div>
       <div class="tournament__match">
-        <a class="tournament__match__team" >Lorem ipsum.</a>
-        <a class="tournament__match__team" >Lorem ipsum.</a>
+        <a class="tournament__match__team" >TBD</a>
+        <a class="tournament__match__team" >TBD</a>
       </div>
     </div>
 
     <!-- tournament__round 1/2 -->
     <div class="tournament__round">
+      <div class = "label"><h2>Semifinal</h2></div>
       <div class="tournament__match">
-        <a class="tournament__match__team" >Lorem ipsum.</a>
-        <a class="tournament__match__team" >Lorem ipsum.</a>
+        <a class="tournament__match__team" >TBD</a>
+        <a class="tournament__match__team" >TBD</a>
       </div>
       <div class="tournament__match">
-        <a class="tournament__match__team" >Lorem ipsum.</a>
-        <a class="tournament__match__team" >Lorem ipsum.</a>
+        <a class="tournament__match__team" >TBD</a>
+        <a class="tournament__match__team" >TBD</a>
       </div>
     </div>
 
     <!-- tournament__round final -->
     <div class="tournament__round tournament__round--final">
+      <div class = "label"><h2>Final</h2></div>
       <div class="tournament__match">
-        <a class="tournament__match__team" >Lorem ipsum.</a>
-        <a class="tournament__match__team" >Lorem ipsum.</a>
+        <a class="tournament__match__team" >TBD</a>
+        <a class="tournament__match__team" >TBD</a>
       </div>
     </div>
 
     <!-- tournament__round winner -->
     <div class="tournament__round tournament__round--winner">
+    <div class = "label"><h2>Champion</h2></div>
       <div class="tournament__match">
-        <a class="tournament__match__team" >Lorem ipsum.</a>
+        <a class="tournament__match__team" >TBD</a>
       </div>
     </div>
   </div>
@@ -142,10 +146,18 @@ export default {
 body {
   background: #383738;
 }
-
+.label{
+  font-size:16px;
+  color: white;
+  padding:20px;
+  background: rgba(0, 0, 0, 0) linear-gradient(to right, rgb(255, 65, 108), rgb(255, 75, 43));
+  margin:10px;
+  border-radius:10px;
+  box-shadow:10px 10px 20px #333;
+}
 .tournament {
-    margin-top:30px;
-  position: relative;
+  margin-top:100px;
+
   min-height: 300px;
   padding: 30px 0 0;
 }
@@ -153,16 +165,15 @@ body {
   font-size: 0;
   line-height: 0;
   display: grid;
-grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   grid-template-rows: minmax(100px, auto);
 
   align-items: stretch;
   min-height: 400px;
 }
 .tournament__round {
-  position: relative;
+
   flex: 1 0;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
 }
