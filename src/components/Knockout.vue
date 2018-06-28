@@ -10,7 +10,42 @@
   <div class="tournament__grid">
     <!-- tournament__round 1/8 -->
     
-    <div class="tournament__round tournament__round--first-round">
+    <div class="tournament__round tournament__round--first-round" v-if="sixteen">
+        <div class = "label"><h2>Round of 16</h2></div>
+      <div class="tournament__match">
+        <a class="tournament__match__team" >{{rounds[2].matches[1].team1.name}}</a>
+        <a class="tournament__match__team" >{{rounds[3].matches[1].team1.name}}</a>
+      </div>
+      <div class="tournament__match">
+        <a class="tournament__match__team" >{{rounds[2].matches[1].team1.name}}</a>
+        <a class="tournament__match__team" >{{rounds[2].matches[1].team1.name}}</a>
+      </div>
+      <div class="tournament__match">
+        <a class="tournament__match__team" >{{rounds[2].matches[1].team1.name}}</a>
+        <a class="tournament__match__team" >{{rounds[2].matches[1].team1.name}}</a>
+      </div>
+      <div class="tournament__match">
+        <a class="tournament__match__team" >{{rounds[2].matches[1].team1.name}}</a>
+        <a class="tournament__match__team" >{{rounds[2].matches[1].team1.name}}</a>
+      </div>
+      <div class="tournament__match">
+        <a class="tournament__match__team" >{{rounds[2].matches[1].team1.name}}</a>
+        <a class="tournament__match__team" >{{rounds[2].matches[1].team1.name}}</a>
+      </div>
+      <div class="tournament__match">
+        <a class="tournament__match__team" >{{rounds[2].matches[1].team1.name}}</a>
+        <a class="tournament__match__team" >{{rounds[2].matches[1].team1.name}}</a>
+      </div>
+      <div class="tournament__match">
+        <a class="tournament__match__team" >{{rounds[2].matches[1].team1.name}}</a>
+        <a class="tournament__match__team" >{{rounds[2].matches[1].team1.name}}</a>
+      </div>
+      <div class="tournament__match">
+        <a class="tournament__match__team" >{{rounds[2].matches[1].team1.name}}</a>
+        <a class="tournament__match__team" >{{rounds[2].matches[1].team1.name}}</a>
+      </div>
+    </div>
+    <div class="tournament__round tournament__round--first-round" v-else>
         <div class = "label"><h2>Round of 16</h2></div>
       <div class="tournament__match">
         <a class="tournament__match__team" >TBD</a>
@@ -46,7 +81,28 @@
       </div>
     </div>
 
-    <div class="tournament__round tournament__round--first-round">
+    <div class="tournament__round tournament__round--first-round" v-if="eight">
+      <div class = "label"><h2>Quarterfinal</h2></div>
+      <div class="tournament__match tournament__match">
+        <a class="tournament__match__team" >{{rounds[2].matches[1].team1.name}}</a>
+        <a class="tournament__match__team" >{{rounds[2].matches[1].team1.name}}</a>
+      </div>
+      <div class="tournament__match">
+        <a class="tournament__match__team" >{{rounds[2].matches[1].team1.name}}</a>
+        <a class="tournament__match__team" >{{rounds[2].matches[1].team1.name}}</a>
+      </div>
+      <div class="tournament__match">
+        <a class="tournament__match__team" >{{rounds[2].matches[1].team1.name}}</a>
+        <a class="tournament__match__team" >{{rounds[2].matches[1].team1.name}}</a>
+      </div>
+      <div class="tournament__match">
+        <a class="tournament__match__team" >{{rounds[2].matches[1].team1.name}}</a>
+        <a class="tournament__match__team" >{{rounds[2].matches[1].team1.name}}</a>
+      </div>
+      
+      
+    </div>
+    <div class="tournament__round tournament__round--first-round" v-else>
       <div class = "label"><h2>Quarterfinal</h2></div>
       <div class="tournament__match tournament__match">
         <a class="tournament__match__team" >TBD</a>
@@ -64,6 +120,8 @@
         <a class="tournament__match__team" >TBD</a>
         <a class="tournament__match__team" >TBD</a>
       </div>
+      
+      
     </div>
 
     <!-- tournament__round 1/2 -->
@@ -112,9 +170,6 @@ export default {
     return {
       rounds: [],
       match:null,
-
-
-
     };
   },
   beforeMount() {
@@ -126,7 +181,7 @@ export default {
 
 
     
-  },
+  }
     
 }
 </script>
@@ -165,7 +220,7 @@ body {
   font-size: 0;
   line-height: 0;
   display: grid;
-grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   grid-template-rows: minmax(100px, auto);
 
   align-items: stretch;
@@ -201,7 +256,7 @@ grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   position: absolute;
   right: 0;
   width: 2px;
-  background: white;
+  background: salmon;
   top: 25%;
   bottom: 25%;
 }
@@ -215,8 +270,8 @@ grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   color: #FF4136;
   text-decoration: none;
   box-sizing: border-box;
-  background-color:#001f3f;
-  box-shadow:10px 10px 20px gray;
+  background-color:white;
+  box-shadow:3px 3px 10px black;
     border-radius:10px;
   display: flex;
   justify-content: center;
@@ -238,7 +293,7 @@ grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   width: 999px;
   height: 2px;
   margin-top: -1px;
-  background: white;
+  background: salmon;
 }
 .tournament__match__team:after {
   left: 100%;

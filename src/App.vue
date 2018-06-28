@@ -22,7 +22,7 @@ export default {
 
 <style>
 body{
-background: rgba(0, 0, 0, 0) linear-gradient(to right, rgb(0, 242, 96), rgb(5, 117, 230));
+background: linear-gradient(315deg, rgb(252, 0, 170), rgb(0, 219, 222));
 }
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
