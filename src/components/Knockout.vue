@@ -10,113 +10,87 @@
   <div class="tournament__grid">
     <!-- tournament__round 1/8 -->
     
-    <div class="tournament__round tournament__round--first-round" v-if="sixteen">
+   
+    <div class="tournament__round tournament__round--first-round" >
         <div class = "label"><h2>Round of 16</h2></div>
-      <div class="tournament__match">
-        <a class="tournament__match__team" >{{rounds[2].matches[1].team1.name}}</a>
-        <a class="tournament__match__team" >{{rounds[3].matches[1].team1.name}}</a>
+      <div class="tournament__match" v-if="sixteen.matches[0]" @click="sendData(match), show()" >
+        <a class="tournament__match__team" >{{sixteen.matches[0].team1.name}}</a>
+        <a class="tournament__match__team" >{{sixteen.matches[0].team2.name}}</a>
       </div>
-      <div class="tournament__match">
-        <a class="tournament__match__team" >{{rounds[2].matches[1].team1.name}}</a>
-        <a class="tournament__match__team" >{{rounds[2].matches[1].team1.name}}</a>
-      </div>
-      <div class="tournament__match">
-        <a class="tournament__match__team" >{{rounds[2].matches[1].team1.name}}</a>
-        <a class="tournament__match__team" >{{rounds[2].matches[1].team1.name}}</a>
-      </div>
-      <div class="tournament__match">
-        <a class="tournament__match__team" >{{rounds[2].matches[1].team1.name}}</a>
-        <a class="tournament__match__team" >{{rounds[2].matches[1].team1.name}}</a>
-      </div>
-      <div class="tournament__match">
-        <a class="tournament__match__team" >{{rounds[2].matches[1].team1.name}}</a>
-        <a class="tournament__match__team" >{{rounds[2].matches[1].team1.name}}</a>
-      </div>
-      <div class="tournament__match">
-        <a class="tournament__match__team" >{{rounds[2].matches[1].team1.name}}</a>
-        <a class="tournament__match__team" >{{rounds[2].matches[1].team1.name}}</a>
-      </div>
-      <div class="tournament__match">
-        <a class="tournament__match__team" >{{rounds[2].matches[1].team1.name}}</a>
-        <a class="tournament__match__team" >{{rounds[2].matches[1].team1.name}}</a>
-      </div>
-      <div class="tournament__match">
-        <a class="tournament__match__team" >{{rounds[2].matches[1].team1.name}}</a>
-        <a class="tournament__match__team" >{{rounds[2].matches[1].team1.name}}</a>
-      </div>
-    </div>
-    <div class="tournament__round tournament__round--first-round" v-else>
-        <div class = "label"><h2>Round of 16</h2></div>
-      <div class="tournament__match">
+      <div class="tournament__match" v-else>
         <a class="tournament__match__team" >TBD</a>
         <a class="tournament__match__team" >TBD</a>
       </div>
-      <div class="tournament__match">
+      <div class="tournament__match" >
+        <a class="tournament__match__team" >{{sixteen.matches[1].team1.name}}</a>
+        <a class="tournament__match__team" >{{sixteen.matches[1].team2.name}}</a>
+      </div>
+      <div class="tournament__match" >
+        <a class="tournament__match__team" >{{sixteen.matches[2].team1.name}}</a>
+        <a class="tournament__match__team" >{{sixteen.matches[2].team2.name}}</a>
+      </div>
+      <div class="tournament__match" >
+        <a class="tournament__match__team" >{{sixteen.matches[3].team1.name}}</a>
+        <a class="tournament__match__team" >{{sixteen.matches[3].team2.name}}</a>
+      </div>
+      <div class="tournament__match" >
+        <a class="tournament__match__team" >{{sixteen.matches[4].team1.name}}</a>
+        <a class="tournament__match__team" >{{sixteen.matches[4].team2.name}}</a>
+      </div>
+      <div class="tournament__match" >
+        <a class="tournament__match__team" >{{sixteen.matches[5].team1.name}}</a>
+        <a class="tournament__match__team" >{{sixteen.matches[5].team2.name}}</a>
+      </div>
+      <div class="tournament__match" v-if="sixteen.matches[6]">
+        <a class="tournament__match__team" >{{sixteen.matches[6].team1.name}}</a>
+        <a class="tournament__match__team" >{{sixteen.matches[6].team2.name}}</a>
+      </div>
+      <div class="tournament__match" v-else>
         <a class="tournament__match__team" >TBD</a>
         <a class="tournament__match__team" >TBD</a>
       </div>
-      <div class="tournament__match">
-        <a class="tournament__match__team" >TBD</a>
-        <a class="tournament__match__team" >TBD</a>
+      <div class="tournament__match" v-if="sixteen.matches[7]">
+        <a class="tournament__match__team" >{{sixteen.matches[7].team1.name}}</a>
+        <a class="tournament__match__team" >{{sixteen.matches[7].team2.name}}</a>
       </div>
-      <div class="tournament__match">
-        <a class="tournament__match__team" >TBD</a>
-        <a class="tournament__match__team" >TBD</a>
-      </div>
-      <div class="tournament__match">
-        <a class="tournament__match__team" >TBD</a>
-        <a class="tournament__match__team" >TBD</a>
-      </div>
-      <div class="tournament__match">
-        <a class="tournament__match__team" >TBD</a>
-        <a class="tournament__match__team" >TBD</a>
-      </div>
-      <div class="tournament__match">
-        <a class="tournament__match__team" >TBD</a>
-        <a class="tournament__match__team" >TBD</a>
-      </div>
-      <div class="tournament__match">
+      <div class="tournament__match" v-else>
         <a class="tournament__match__team" >TBD</a>
         <a class="tournament__match__team" >TBD</a>
       </div>
     </div>
 
-    <div class="tournament__round tournament__round--first-round" v-if="eight">
+    
+    <div class="tournament__round tournament__round--first-round">
       <div class = "label"><h2>Quarterfinal</h2></div>
-      <div class="tournament__match tournament__match">
-        <a class="tournament__match__team" >{{rounds[2].matches[1].team1.name}}</a>
-        <a class="tournament__match__team" >{{rounds[2].matches[1].team1.name}}</a>
+      <div class="tournament__match tournament__match" v-if="eight.matches[0]">
+        <a class="tournament__match__team" >{{eight.matches[0].team1.name}}</a>
+        <a class="tournament__match__team" >{{eight.matches[0].team2.name}}</a>
       </div>
-      <div class="tournament__match">
-        <a class="tournament__match__team" >{{rounds[2].matches[1].team1.name}}</a>
-        <a class="tournament__match__team" >{{rounds[2].matches[1].team1.name}}</a>
-      </div>
-      <div class="tournament__match">
-        <a class="tournament__match__team" >{{rounds[2].matches[1].team1.name}}</a>
-        <a class="tournament__match__team" >{{rounds[2].matches[1].team1.name}}</a>
-      </div>
-      <div class="tournament__match">
-        <a class="tournament__match__team" >{{rounds[2].matches[1].team1.name}}</a>
-        <a class="tournament__match__team" >{{rounds[2].matches[1].team1.name}}</a>
-      </div>
-      
-      
-    </div>
-    <div class="tournament__round tournament__round--first-round" v-else>
-      <div class = "label"><h2>Quarterfinal</h2></div>
-      <div class="tournament__match tournament__match">
+       <div class="tournament__match tournament__match" v-else>
         <a class="tournament__match__team" >TBD</a>
         <a class="tournament__match__team" >TBD</a>
       </div>
-      <div class="tournament__match">
+       <div class="tournament__match tournament__match" v-if="eight.matches[1]">
+        <a class="tournament__match__team" >{{eight.matches[1].team1.name}}</a>
+        <a class="tournament__match__team" >{{eight.matches[1].team2.name}}</a>
+      </div>
+       <div class="tournament__match tournament__match" v-else>
         <a class="tournament__match__team" >TBD</a>
         <a class="tournament__match__team" >TBD</a>
       </div>
-      <div class="tournament__match">
+       <div class="tournament__match tournament__match" v-if="eight.matches[2]">
+        <a class="tournament__match__team" >{{eight.matches[2].team1.name}}</a>
+        <a class="tournament__match__team" >{{eight.matches[2].team2.name}}</a>
+      </div>
+       <div class="tournament__match tournament__match" v-else>
         <a class="tournament__match__team" >TBD</a>
         <a class="tournament__match__team" >TBD</a>
       </div>
-      <div class="tournament__match">
+       <div class="tournament__match tournament__match" v-if="eight.matches[3]">
+        <a class="tournament__match__team" >{{eight.matches[3].team1.name}}</a>
+        <a class="tournament__match__team" >{{eight.matches[3].team2.name}}</a>
+      </div>
+       <div class="tournament__match tournament__match" v-else>
         <a class="tournament__match__team" >TBD</a>
         <a class="tournament__match__team" >TBD</a>
       </div>
@@ -127,11 +101,19 @@
     <!-- tournament__round 1/2 -->
     <div class="tournament__round">
       <div class = "label"><h2>Semifinal</h2></div>
-      <div class="tournament__match">
+      <div class="tournament__match tournament__match" v-if="semi.matches[0]">
+        <a class="tournament__match__team" >{{eight.matches[0].team1.name}}</a>
+        <a class="tournament__match__team" >{{eight.matches[0].team2.name}}</a>
+      </div>
+       <div class="tournament__match tournament__match" else>
         <a class="tournament__match__team" >TBD</a>
         <a class="tournament__match__team" >TBD</a>
       </div>
-      <div class="tournament__match">
+      <div class="tournament__match tournament__match" v-if="eight.matches[1]">
+        <a class="tournament__match__team" >{{eight.matches[1].team1.name}}</a>
+        <a class="tournament__match__team" >{{eight.matches[1].team2.name}}</a>
+      </div>
+       <div class="tournament__match tournament__match" else>
         <a class="tournament__match__team" >TBD</a>
         <a class="tournament__match__team" >TBD</a>
       </div>
@@ -140,22 +122,51 @@
     <!-- tournament__round final -->
     <div class="tournament__round tournament__round--final">
       <div class = "label"><h2>Final</h2></div>
-      <div class="tournament__match">
+      <div class="tournament__match tournament__match" v-if="final.matches[0]">
+        <a class="tournament__match__team" >{{final.matches[0].team1.name}}</a>
+        <a class="tournament__match__team" >{{final.matches[0].team2.name}}</a>
+      </div>
+       <div class="tournament__match tournament__match" else>
         <a class="tournament__match__team" >TBD</a>
         <a class="tournament__match__team" >TBD</a>
       </div>
     </div>
 
     <!-- tournament__round winner -->
-    <div class="tournament__round tournament__round--winner">
+    <div class="tournament__round tournament__round--winner" v-if="final.matches[0]">
     <div class = "label"><h2>Champion</h2></div>
+    <div class="tournament__match" >
+        <a class="tournament__match__team" >{{final.matches[0].team1.name}}</a>
+      </div>
+      <div class="tournament__match" v-if="final.matches[0].score1 > final.matches[0].score2">
+        <a class="tournament__match__team" >{{final.matches[0].team1.name}}</a>
+      </div>
+      <div class="tournament__match" v-else-if="final.matches[0].score1 < final.matches[0].score2">
+        <a class="tournament__match__team" >{{final.matches[0].team2.name}}</a>
+      </div>
+
+    </div>
+    <div class="tournament__round tournament__round--winner" v-else>
+    <div class = "label"><h2>Champion</h2></div>
+    
       <div class="tournament__match">
         <a class="tournament__match__team" >TBD</a>
       </div>
+      
     </div>
   </div>
 
+
+
+
+ <modal name="detailview"  classes="detail-modal" >
+   <div class = "modal-bg">TEST</div>
+  
+
+</modal>
+
 </div>
+
   </div>
 </template>
 
@@ -167,21 +178,40 @@ export default {
 
     //{{rounds[16].matches[1].team1.name}}
   data() {
+
     return {
-      rounds: [],
-      match:null,
+      sixteen: null,
+      eight: null,
+      semi:null,
+      final:null,
+
+
     };
   },
-  beforeMount() {
+ created() {
     axios
       .get(
         "https://raw.githubusercontent.com/openfootball/world-cup.json/master/2018/worldcup.json"
       )
-      .then(response => (this.rounds = response.data.rounds));
+      .then(response => (this.sixteen = response.data.rounds[15],this.eight = response.data.rounds[16],this.semi = response.data.rounds[17],this.final = response.data.rounds[19],this.champ = response.data.rounds[20]));
+      
+
 
 
     
-  }
+  },
+   methods: {
+  show () {
+    this.$modal.show('detailview');
+  },
+  hide () {
+    this.$modal.hide('detailview');
+   },
+   sendData(match){
+     this.match = match;
+
+   }
+  },
     
 }
 </script>
@@ -313,11 +343,13 @@ body {
 .vhidden {
   visibility: hidden;
 }
+.modal-bg{
+  background-color:white;
+  height:200px;
+  width:400px;
+}
 
 
-/*
- *  Flex Layout Specifics
-*/
 
 
 

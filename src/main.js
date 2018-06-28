@@ -7,8 +7,9 @@ Vue.use(VModal);
 
 
 Vue.config.productionTip = false
-
+global.vm = Vue; 
 new Vue({
   router,
   render: h => h(App)
 }).$mount("#app");
+
