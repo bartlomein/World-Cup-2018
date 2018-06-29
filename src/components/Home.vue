@@ -40,7 +40,7 @@ export default {
 }
 .welcome{
     z-index: 9999;
-background: url('../assets/polishfans10.png');
+    background-image: linear-gradient(to right, #ff758c 0%, #ff7eb3 100%);
 background-size: cover;
 display:flex;
 justify-content: center;
