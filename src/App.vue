@@ -1,27 +1,28 @@
 <template>
   <div id="app">
-    <div class = "title-header"><h1>World Cup 2018<br> </h1><h2>Group Stage</h2></div>
+    <div class = "title-header"><h1><router-link to="/">World Cup 2018</router-link><br> </h1><h2>  Stages: <router-link to="/group">Group</router-link><span> </span> <router-link to="/knockout">Knockout</router-link></h2></div>
 
-    <Days/>
+
+       
+  <transition name="fade">
+ <router-view/>
+ </transition>
   </div>
 </template>
 
 <script>
-import Days from './components/Days.vue'
+
 
 
 
 export default {
-  name: 'days',
-  components: {
-    Days
-  },
+
 }
 </script>
 
 <style>
 body{
-background: linear-gradient(315deg,#fc00aa,#00dbde)
+background: linear-gradient(315deg, rgb(252, 0, 170), rgb(0, 219, 222));
 }
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -30,6 +31,8 @@ background: linear-gradient(315deg,#fc00aa,#00dbde)
   text-align: center;
   color: #2c3e50;
   margin-top: 20px;
+
+
 }
 
 .title-header{
@@ -43,21 +46,52 @@ background: linear-gradient(315deg,#fc00aa,#00dbde)
   box-shadow: 5px 5px 20px gray;
   background: linear-gradient(to right, rgb(69, 127, 202), rgb(86, 145, 200));
   color:white;
+  z-index: 999999999999;
 }
 h1{
-  font-size:38px;
-  margin:5px;
+  font-size:32px;
+  margin:5px 5px 5px 5px;
   font-weight: bold;
+
 }
 h2{
   margin:5px;
   font-weight:bold;
+}
+.title-header a{
+  margin-left:5px;
+  margin-right:5px;
+
+  padding:5px;
+  color:white;
+  text-decoration: none;
+
+
+}
+
+
+
+.title-header a:hover{
+  text-decoration: underline;
+  color:#FEDB32;
 }
 @media screen and (max-width: 370px){
 
   .title-header h1{
     font-size:34px;
   }
+}
+.fade-enter-active, .fade-leave-active {
+  transition-property: opacity;
+  transition-duration: .25s;
+}
+
+.fade-enter-active {
+  transition-delay: .25s;
+}
+
+.fade-enter, .fade-leave-active {
+  opacity: 0
 }
 
 
