@@ -6,8 +6,8 @@
              <div class = "main-text">
              <h1>  World Cup 2018</h1>
          <h2>I created this page to learn more about Vue.js, CSS Grid and Rest APIs</h2>
-         <h4>Feel free to browse the code at my Github</h4>
-         <h5>Enjoy!</h5>
+         <h4>Feel free to browse the code at my <a href = "https://github.com/bartlomein/World-Cup-2018">Github</a></h4>
+         <h3>Enjoy!</h3>
          </div>
           </div>
    
@@ -60,6 +60,9 @@ color:white;
     font-weight:bold;
     font-size:80px;
 
+}
+.main-text a{
+    color:white;
 }
 
 </style>

@@ -50,8 +50,9 @@ background: linear-gradient(315deg, rgb(252, 0, 170), rgb(0, 219, 222));
 }
 h1{
   font-size:32px;
-  margin:5px;
+  margin:5px 5px 5px 5px;
   font-weight: bold;
+
 }
 h2{
   margin:5px;
@@ -60,14 +61,19 @@ h2{
 .title-header a{
   margin-left:5px;
   margin-right:5px;
+
   padding:5px;
   color:white;
   text-decoration: none;
 
+
 }
 
-.title-header a:hover{
 
+
+.title-header a:hover{
+  text-decoration: underline;
+  color:#FEDB32;
 }
 @media screen and (max-width: 370px){
 

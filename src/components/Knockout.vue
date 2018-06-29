@@ -13,45 +13,45 @@
    
     <div class="tournament__round tournament__round--first-round" >
         <div class = "label"><h2>Round of 16</h2></div>
-      <div class="tournament__match" v-if="sixteen.matches[0]" @click="sendData(match), show()" >
-        <a class="tournament__match__team" >{{sixteen.matches[0].team1.name}}</a>
-        <a class="tournament__match__team" >{{sixteen.matches[0].team2.name}}</a>
+      <div class="tournament__match" v-if="sixteen.matches[0]" @click="sendData(sixteen.matches[0]), show(),formatDate(match)" >
+        <a class="tournament__match__team clickable" >{{sixteen.matches[0].team1.name}}</a>
+        <a class="tournament__match__team clickable" >{{sixteen.matches[0].team2.name}}</a>
       </div>
       <div class="tournament__match" v-else>
         <a class="tournament__match__team" >TBD</a>
         <a class="tournament__match__team" >TBD</a>
       </div>
-      <div class="tournament__match" >
-        <a class="tournament__match__team" >{{sixteen.matches[1].team1.name}}</a>
-        <a class="tournament__match__team" >{{sixteen.matches[1].team2.name}}</a>
+      <div class="tournament__match" @click="sendData(sixteen.matches[1]), show(),formatDate(match)">
+        <a class="tournament__match__team clickable" >{{sixteen.matches[1].team1.name}}</a>
+        <a class="tournament__match__team clickable" >{{sixteen.matches[1].team2.name}}</a>
       </div>
-      <div class="tournament__match" >
-        <a class="tournament__match__team" >{{sixteen.matches[2].team1.name}}</a>
-        <a class="tournament__match__team" >{{sixteen.matches[2].team2.name}}</a>
+      <div class="tournament__match" @click="sendData(sixteen.matches[2]), show(),formatDate(match)">
+        <a class="tournament__match__team clickable" >{{sixteen.matches[2].team1.name}}</a>
+        <a class="tournament__match__team clickable" >{{sixteen.matches[2].team2.name}}</a>
       </div>
-      <div class="tournament__match" >
-        <a class="tournament__match__team" >{{sixteen.matches[3].team1.name}}</a>
-        <a class="tournament__match__team" >{{sixteen.matches[3].team2.name}}</a>
+      <div class="tournament__match" @click="sendData(sixteen.matches[3]), show(),formatDate(match)" >
+        <a class="tournament__match__team clickable" >{{sixteen.matches[3].team1.name}}</a>
+        <a class="tournament__match__team clickable" >{{sixteen.matches[3].team2.name}}</a>
       </div>
-      <div class="tournament__match" >
-        <a class="tournament__match__team" >{{sixteen.matches[4].team1.name}}</a>
-        <a class="tournament__match__team" >{{sixteen.matches[4].team2.name}}</a>
+      <div class="tournament__match" @click="sendData(sixteen.matches[4]), show(),formatDate(match)">
+        <a class="tournament__match__team clickable" >{{sixteen.matches[4].team1.name}}</a>
+        <a class="tournament__match__team clickable" >{{sixteen.matches[4].team2.name}}</a>
       </div>
-      <div class="tournament__match" >
-        <a class="tournament__match__team" >{{sixteen.matches[5].team1.name}}</a>
-        <a class="tournament__match__team" >{{sixteen.matches[5].team2.name}}</a>
+      <div class="tournament__match" @click="sendData(sixteen.matches[5]), show(),formatDate(match)">
+        <a class="tournament__match__team clickable" >{{sixteen.matches[5].team1.name}}</a>
+        <a class="tournament__match__team clickable" >{{sixteen.matches[5].team2.name}}</a>
       </div>
-      <div class="tournament__match" v-if="sixteen.matches[6]">
-        <a class="tournament__match__team" >{{sixteen.matches[6].team1.name}}</a>
-        <a class="tournament__match__team" >{{sixteen.matches[6].team2.name}}</a>
+      <div class="tournament__match" v-if="sixteen.matches[6]" @click="sendData(sixteen.matches[6]), show(),formatDate(match)">
+        <a class="tournament__match__team clickable" >{{sixteen.matches[6].team1.name}}</a>
+        <a class="tournament__match__team clickable" >{{sixteen.matches[6].team2.name}}</a>
       </div>
       <div class="tournament__match" v-else>
         <a class="tournament__match__team" >TBD</a>
         <a class="tournament__match__team" >TBD</a>
       </div>
-      <div class="tournament__match" v-if="sixteen.matches[7]">
-        <a class="tournament__match__team" >{{sixteen.matches[7].team1.name}}</a>
-        <a class="tournament__match__team" >{{sixteen.matches[7].team2.name}}</a>
+      <div class="tournament__match" v-if="sixteen.matches[7]" @click="sendData(sixteen.matches[7]), show(),formatDate(match)">
+        <a class="tournament__match__team clickable" >{{sixteen.matches[7].team1.name}}</a>
+        <a class="tournament__match__team clickable" >{{sixteen.matches[7].team2.name}}</a>
       </div>
       <div class="tournament__match" v-else>
         <a class="tournament__match__team" >TBD</a>
@@ -62,33 +62,33 @@
     
     <div class="tournament__round tournament__round--first-round">
       <div class = "label"><h2>Quarterfinal</h2></div>
-      <div class="tournament__match tournament__match" v-if="eight.matches[0]">
-        <a class="tournament__match__team" >{{eight.matches[0].team1.name}}</a>
-        <a class="tournament__match__team" >{{eight.matches[0].team2.name}}</a>
+      <div class="tournament__match tournament__match" v-if="eight.matches[0]" @click="sendData(eight.matches[0]), show(),formatDate(match)" >
+        <a class="tournament__match__team clickable" >{{eight.matches[0].team1.name}}</a>
+        <a class="tournament__match__team clickable" >{{eight.matches[0].team2.name}}</a>
       </div>
        <div class="tournament__match tournament__match" v-else>
         <a class="tournament__match__team" >TBD</a>
         <a class="tournament__match__team" >TBD</a>
       </div>
-       <div class="tournament__match tournament__match" v-if="eight.matches[1]">
-        <a class="tournament__match__team" >{{eight.matches[1].team1.name}}</a>
-        <a class="tournament__match__team" >{{eight.matches[1].team2.name}}</a>
+       <div class="tournament__match tournament__match" v-if="eight.matches[1]" @click="sendData(eight.matches[1]), show(),formatDate(match)">
+        <a class="tournament__match__team clickable" >{{eight.matches[1].team1.name}}</a>
+        <a class="tournament__match__team clickable" >{{eight.matches[1].team2.name}}</a>
       </div>
        <div class="tournament__match tournament__match" v-else>
         <a class="tournament__match__team" >TBD</a>
         <a class="tournament__match__team" >TBD</a>
       </div>
-       <div class="tournament__match tournament__match" v-if="eight.matches[2]">
-        <a class="tournament__match__team" >{{eight.matches[2].team1.name}}</a>
-        <a class="tournament__match__team" >{{eight.matches[2].team2.name}}</a>
+       <div class="tournament__match tournament__match" v-if="eight.matches[2]" @click="sendData(eight.matches[2]), show(),formatDate(match)">
+        <a class="tournament__match__team clickable" >{{eight.matches[2].team1.name}}</a>
+        <a class="tournament__match__team clickable" >{{eight.matches[2].team2.name}}</a>
       </div>
        <div class="tournament__match tournament__match" v-else>
         <a class="tournament__match__team" >TBD</a>
         <a class="tournament__match__team" >TBD</a>
       </div>
-       <div class="tournament__match tournament__match" v-if="eight.matches[3]">
-        <a class="tournament__match__team" >{{eight.matches[3].team1.name}}</a>
-        <a class="tournament__match__team" >{{eight.matches[3].team2.name}}</a>
+       <div class="tournament__match tournament__match" v-if="eight.matches[3]" @click="sendData(eight.matches[3]), show(),formatDate(match)">
+        <a class="tournament__match__team clickable" >{{eight.matches[3].team1.name}}</a>
+        <a class="tournament__match__team clickable" >{{eight.matches[3].team2.name}}</a>
       </div>
        <div class="tournament__match tournament__match" v-else>
         <a class="tournament__match__team" >TBD</a>
@@ -101,17 +101,17 @@
     <!-- tournament__round 1/2 -->
     <div class="tournament__round">
       <div class = "label"><h2>Semifinal</h2></div>
-      <div class="tournament__match tournament__match" v-if="semi.matches[0]">
-        <a class="tournament__match__team" >{{eight.matches[0].team1.name}}</a>
-        <a class="tournament__match__team" >{{eight.matches[0].team2.name}}</a>
+      <div class="tournament__match tournament__match" v-if="semi.matches[0]" @click="sendData(semi.matches[0]), show(),formatDate(match)">
+        <a class="tournament__match__team clickable" >{{eight.matches[0].team1.name}}</a>
+        <a class="tournament__match__team clickable" >{{eight.matches[0].team2.name}}</a>
       </div>
        <div class="tournament__match tournament__match" else>
         <a class="tournament__match__team" >TBD</a>
         <a class="tournament__match__team" >TBD</a>
       </div>
-      <div class="tournament__match tournament__match" v-if="eight.matches[1]">
-        <a class="tournament__match__team" >{{eight.matches[1].team1.name}}</a>
-        <a class="tournament__match__team" >{{eight.matches[1].team2.name}}</a>
+      <div class="tournament__match tournament__match" v-if="eight.matches[1]" @click="sendData(semi.matches[1]), show(),formatDate(match)">
+        <a class="tournament__match__team clickable" >{{eight.matches[1].team1.name}}</a>
+        <a class="tournament__match__team clickable" >{{eight.matches[1].team2.name}}</a>
       </div>
        <div class="tournament__match tournament__match" else>
         <a class="tournament__match__team" >TBD</a>
@@ -122,9 +122,9 @@
     <!-- tournament__round final -->
     <div class="tournament__round tournament__round--final">
       <div class = "label"><h2>Final</h2></div>
-      <div class="tournament__match tournament__match" v-if="final.matches[0]">
-        <a class="tournament__match__team" >{{final.matches[0].team1.name}}</a>
-        <a class="tournament__match__team" >{{final.matches[0].team2.name}}</a>
+      <div class="tournament__match tournament__match" v-if="final.matches[0]" @click="sendData(final.matches[0]), show(),formatDate(match)">
+        <a class="tournament__match__team clickable" >{{final.matches[0].team1.name}}</a>
+        <a class="tournament__match__team clickable" >{{final.matches[0].team2.name}}</a>
       </div>
        <div class="tournament__match tournament__match" else>
         <a class="tournament__match__team" >TBD</a>
@@ -133,7 +133,7 @@
     </div>
 
     <!-- tournament__round winner -->
-    <div class="tournament__round tournament__round--winner" v-if="final.matches[0]">
+    <div class="tournament__round tournament__round--winner" v-if="final.matches[0]" @click="sendData(final.matches[0]), show(),formatDate(match)">
     <div class = "label"><h2>Champion</h2></div>
     <div class="tournament__match" >
         <a class="tournament__match__team" >{{final.matches[0].team1.name}}</a>
@@ -157,15 +157,40 @@
   </div>
 
 
+</div>
+
+ <modal name="detailview"  classes="detail-modal" :adaptive="true" :maxHeight="800">
+<div class="modal-details" v-if= "match">
+  <div class = "detail-group">{{date}}</div>
+  <div class = "modal-names-and-scores">
+     <div class= "modal-team-one"> <div class = "modal-team-name">{{ match.team1.name }} </div>
+        <div class = "score-one-goals" v-for="goal in match.goals1">
+         <div class = "scorer-name"> {{goal.name}} <span class = "scorer-minute">{{goal.minute}}'</span></div>
+          </div>
+       </div> 
+       <div class="modal-score-one"> {{match.score1}}
+        
+       </div> 
+      <div class= "modal-score-two">{{match.score2}} </div> 
+      <div class = "modal-team-two"> <div class = "modal-team-name"> {{ match.team2.name }} </div>
+        <div class = "score-two-goals" v-for="goal in match.goals2">
+          {{goal.name}} {{goal.minute}}'
+          </div>
+          
+      </div>
 
 
- <modal name="detailview"  classes="detail-modal" >
-   <div class = "modal-bg">TEST</div>
+  </div>
+  <div class = "modal-time">Time: {{match.time}}  {{match.timezone}}
+    <div class = "modal-city">City: {{match.city}}</div>
   
+  </div>
 
+
+  </div>
 </modal>
 
-</div>
+
 
   </div>
 </template>
@@ -184,6 +209,8 @@ export default {
       eight: null,
       semi:null,
       final:null,
+      match:null,
+      date:null
 
 
     };
@@ -210,6 +237,9 @@ export default {
    sendData(match){
      this.match = match;
 
+   },
+   formatDate(match){
+     this.date  = match.date.replace('2018-','').replace('-','/');
    }
   },
     
@@ -270,6 +300,10 @@ body {
   flex: 1 0;
   align-items: center;
   min-height: 100px;
+
+}
+.clickable:hover {
+cursor:pointer;
 }
 .tournament__match:first-child {
   margin: 0 !important;
@@ -286,7 +320,7 @@ body {
   position: absolute;
   right: 0;
   width: 2px;
-  background: salmon;
+  background: #F0C330;
   top: 25%;
   bottom: 25%;
 }
@@ -297,7 +331,7 @@ body {
   font-size: 16px;
   font-weight: bold;
   transition: color 0.3s ease;
-  color: #FF4136;
+  color: #FB7374;
   text-decoration: none;
   box-sizing: border-box;
   background-color:white;
@@ -314,7 +348,7 @@ body {
   margin: auto;
 }
 .tournament__match__team:focus, .tournament__match__team:hover {
-  color: #fff;
+  color: #FEDB32;
 }
 .tournament__match__team:before, .tournament__match__team:after {
   content: '';
@@ -323,7 +357,7 @@ body {
   width: 999px;
   height: 2px;
   margin-top: -1px;
-  background: salmon;
+  background: #F0C330;
 }
 .tournament__match__team:after {
   left: 100%;
@@ -345,8 +379,75 @@ body {
 }
 .modal-bg{
   background-color:white;
-  height:200px;
-  width:400px;
+  width: 100%;
+  height: 500px;
+
+}
+
+.modal-names-and-scores{
+  font-size:36px;
+  text-align:center;
+  color:white;
+  display:grid;
+
+  grid-template-columns: 1.5fr 0.5fr 0.5fr 1.5fr;
+
+  font-weight:bold;
+}
+
+.modal-details{
+  padding:30px;
+
+  background-color: #88D8BF;
+
+  border-radius:10px;
+
+  margin:0 auto;
+
+
+}
+.modal-time{
+  text-align:center;
+  font-size:18px;
+  color:white;
+  margin-top:30px;
+  font-weight:bold;
+}
+.modal-city{
+  font-size:20px;
+  font-weight:400;
+  
+}
+
+.detail-group{
+  display:flex;
+  justify-content: center;
+  color:white;
+  font-size:24px;
+}
+
+.score-one-goals{
+  font-size:14px;
+
+
+  text-align:left;
+}
+.score-two-goals{
+  font-size:14px;
+
+
+  text-align:right;
+}
+
+.modal-team-name{
+  margin-bottom:10px;
+
+}
+.modal-team-one{
+  text-align:left;
+}
+.modal-team-two{
+  text-align:right;
 }
 
 
