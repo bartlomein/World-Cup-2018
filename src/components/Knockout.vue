@@ -280,7 +280,7 @@ body {
   font-size: 0;
   line-height: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-template-rows: minmax(100px, auto);
 
   align-items: stretch;
