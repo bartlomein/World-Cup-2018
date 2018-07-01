@@ -1,14 +1,13 @@
 <template>
-
 <div class="days">
    <span class="rounds" v-for="(round, index) in rounds" :key="index">
       <div class = "june-days" >
          June {{days[index]}} 
-
          <hr>
       </div>
+
       <div class = "all-matches">
-      <span class="matches"  v-for="match in round.matches" :key="match.id">
+        <span class="matches"  v-for="match in round.matches" :key="match.id">
         
          <div class="game" @click="sendData(match), show()" v-if="match.score1>match.score2">
             <div class="first-team bold">{{match.team1.name}}:
@@ -51,7 +50,7 @@
   <div class = "modal-names-and-scores">
      <div class= "modal-team-one"> <div class = "modal-team-name">{{ match.team1.name }} </div>
         <div class = "score-one-goals" v-for="goal in match.goals1">
-         <div class = "scorer-name"> {{goal.name}} <span class = "scorer-minute">{{goal.minute}}'</span></div>
+         <div :key="match.id" class = "scorer-name"> {{goal.name}} <span class = "scorer-minute">{{goal.minute}}'</span></div>
           </div>
        </div> 
        <div class="modal-score-one"> {{match.score1}}
@@ -82,9 +81,7 @@
 </template>
 
 <script>
-
 import axios from "axios";
-
 
 export default {
   //https://raw.githubusercontent.com/openfootball/world-cup.json/master/2018/worldcup.json
@@ -93,10 +90,7 @@ export default {
     return {
       rounds: [],
       days: [14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28],
-      match:null,
-
-
-
+      match: null
     };
   },
   beforeMount() {
@@ -105,34 +99,26 @@ export default {
         "https://raw.githubusercontent.com/openfootball/world-cup.json/master/2018/worldcup.json"
       )
       .then(response => (this.rounds = response.data.rounds));
-
-
-    
   },
-   methods: {
-  show () {
-    this.$modal.show('detailview');
-  },
-  hide () {
-    this.$modal.hide('detailview');
-   },
-   sendData(match){
-     this.match = match;
-
-   }
-  },
-
-
-
-
-  
+  methods: {
+    show() {
+      this.$modal.show("detailview");
+    },
+    hide() {
+      this.$modal.hide("detailview");
+    },
+    sendData(match) {
+      this.match = match;
+    }
+  }
 };
 </script>
 
 
 <style scoped>
-
-
+.v--modal-overlay {
+  background: rgba(0, 0, 0, 0.4);
+}
 .days {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -144,113 +130,90 @@ export default {
 }
 
 .rounds {
-  
   padding: 30px 30px 20px 30px;
   margin: 10px;
-  box-shadow:0 4px 36px rgba(50,50,93,.11), 0 1px 33px rgba(0,0,0,.08);
+  box-shadow: 0 4px 36px rgba(50, 50, 93, 0.11), 0 1px 33px rgba(0, 0, 0, 0.08);
   background-color: #f9f9f9;
-  border-radius:5px;
+  border-radius: 5px;
 }
-.all-matches{
-  display:grid;
+.all-matches {
+  display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 5px;
-  
-
 }
 
-.game:hover{
-  background-color:rgba(32,160,255,1);
-  cursor:pointer;
+.game:hover {
+  background-color: rgba(32, 160, 255, 1);
+  cursor: pointer;
 }
 
-.game{
-
-  background-color:#4db3ff;
-  box-shadow:0 4px 8px rgba(32,160,255,.3);
-  padding:5px;
-  border-radius:3px;
-  font-size:16px;
-  color:white;
+.game {
+  background-color: #4db3ff;
+  box-shadow: 0 4px 8px rgba(32, 160, 255, 0.3);
+  padding: 5px;
+  border-radius: 3px;
+  font-size: 16px;
+  color: white;
 }
 /*MODAL*/
-.modal-names-and-scores{
-  font-size:36px;
-  text-align:center;
-  color:white;
-  display:grid;
+.modal-names-and-scores {
+  font-size: 36px;
+  text-align: center;
+  color: white;
+  display: grid;
 
   grid-template-columns: 1.5fr 0.5fr 0.5fr 1.5fr;
 
-  font-weight:bold;
+  font-weight: bold;
 }
 
-.modal-details{
-  padding:30px;
+.modal-details {
+  padding: 30px;
 
-  background-color: #88D8BF;
+  background-color: #88d8bf;
 
-  border-radius:10px;
+  border-radius: 10px;
 
-  margin:0 auto;
-
-
+  margin: 0 auto;
 }
-.modal-time{
-  text-align:center;
-  font-size:18px;
-  color:white;
-  margin-top:30px;
-  font-weight:bold;
+.modal-time {
+  text-align: center;
+  font-size: 18px;
+  color: white;
+  margin-top: 30px;
+  font-weight: bold;
 }
-.modal-city{
-  font-size:20px;
-  font-weight:400;
-  
+.modal-city {
+  font-size: 20px;
+  font-weight: 400;
 }
 
-.detail-group{
-  display:flex;
+.detail-group {
+  display: flex;
   justify-content: center;
-  color:white;
-  font-size:24px;
+  color: white;
+  font-size: 24px;
 }
 
-.score-one-goals{
-  font-size:14px;
+.score-one-goals {
+  font-size: 14px;
 
-
-  text-align:left;
+  text-align: left;
 }
-.score-two-goals{
-  font-size:14px;
+.score-two-goals {
+  font-size: 14px;
 
-
-  text-align:right;
+  text-align: right;
 }
 
-.modal-team-name{
-  margin-bottom:10px;
-
+.modal-team-name {
+  margin-bottom: 10px;
 }
-.modal-team-one{
-  text-align:left;
+.modal-team-one {
+  text-align: left;
 }
-.modal-team-two{
-  text-align:right;
-}
-
-
-
-
-
-
-
-
-
-.rounds:first-of-type{
-  height:140px;
-  padding-top:105px;
+.modal-team-two {
+  text-align: right;
 }
 .rounds:nth-of-type(16) {
   display: none;
@@ -276,29 +239,27 @@ export default {
 }
 .bold {
   font-weight: bold;
-  font-size:17px;
+  font-size: 17px;
 }
 
 .tie-color {
   color: red;
 }
 
-@media screen and (max-width: 400px){
-.detail-modal{
-    max-width:90% !important;
+@media screen and (max-width: 400px) {
+  .detail-modal {
+    max-width: 90% !important;
   }
 }
-@media screen and (max-width: 500px){
-.modal-names-and-scores{
-    font-size:26px;
+@media screen and (max-width: 500px) {
+  .modal-names-and-scores {
+    font-size: 26px;
   }
-  .modal-time{
-    font-size:16px;
+  .modal-time {
+    font-size: 16px;
   }
-  .modal-city{
-    font-size:18px;
+  .modal-city {
+    font-size: 18px;
   }
 }
-
-
 </style>
