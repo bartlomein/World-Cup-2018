@@ -21,6 +21,9 @@ export default {
 </script>
 
 <style>
+
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans');
+
 body{
 background: linear-gradient(315deg, rgb(252, 0, 170), rgb(0, 219, 222));
 }
@@ -38,7 +41,7 @@ background: linear-gradient(315deg, rgb(252, 0, 170), rgb(0, 219, 222));
 .title-header{
   position:absolute;
   top:5px;
-
+  font-family: 'IBM Plex Sans', sans-serif;
   border-radius:10px;
   padding:10px 18px 10px 18px;
   max-width:400px;
@@ -64,13 +67,14 @@ h2{
   margin-left:5px;
   margin-right:5px;
 
-  padding:5px 10px 5px 10px; 
-color:#C13C2A;
+  padding:5px 12px 5px 12px; 
+color:#FF7796;
   text-decoration: none;
 
   background-color:snow;
   border-radius:10px;
-  box-shadow:5px 5px 10px gray;
+  box-shadow:3px 3px 10px gray;
+  border: 3px solid white;
 
 
 
@@ -80,7 +84,7 @@ color:#C13C2A;
 
 .title-header a:hover{
 
-  box-shadow:6px 6px 21px;
+  border:3px solid pink;
 
 }
 @media screen and (max-width: 370px){
