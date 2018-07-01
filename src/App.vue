@@ -68,8 +68,6 @@ h2{
 color:#C13C2A;
   text-decoration: none;
 
-
-
   background-color:snow;
   border-radius:10px;
   box-shadow:5px 5px 10px gray;
