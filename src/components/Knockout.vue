@@ -178,6 +178,17 @@
           </div>
           
       </div>
+      <div v-if="match.score1p">
+        <div class = "pk">
+          <div class="pk1">
+            {{match.score1p}}
+          </div>
+          <div class="pk2">
+            {{match.score2p}}
+          </div>
+        </div>
+      </div>
+
 
 
   </div>
@@ -447,6 +458,17 @@ cursor:pointer;
   text-align:left;
 }
 .modal-team-two{
+  text-align:right;
+}
+.pk{
+  font-size:24px;
+
+}
+.pk1{
+  text-align: left;
+}
+
+.pk2{
   text-align:right;
 }
 
