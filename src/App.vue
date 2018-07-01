@@ -40,7 +40,7 @@ background: linear-gradient(315deg, rgb(252, 0, 170), rgb(0, 219, 222));
   top:5px;
    background-color: #f9f9f9;
   border-radius:10px;
-  padding:10px 40px 10px 40px;
+  padding:10px 18px 10px 18px;
   max-width:400px;
   margin:0 auto;
   box-shadow: 5px 5px 20px gray;
@@ -49,8 +49,8 @@ background: linear-gradient(315deg, rgb(252, 0, 170), rgb(0, 219, 222));
   z-index: 999999999999;
 }
 h1{
-  font-size:32px;
-  margin:5px 5px 5px 5px;
+  font-size:28px;
+  margin:5px 5px 10px 5px;
   font-weight: bold;
 
 }
