@@ -1,6 +1,5 @@
 <template>
      <div class="knockout">
-    <h1></h1>
 
     <div class="tournament">
   <!-- tournament logo -->
@@ -221,11 +220,6 @@ export default {
         "https://raw.githubusercontent.com/openfootball/world-cup.json/master/2018/worldcup.json"
       )
       .then(response => (this.sixteen = response.data.rounds[15],this.eight = response.data.rounds[16],this.semi = response.data.rounds[17],this.final = response.data.rounds[19],this.champ = response.data.rounds[20]));
-      
-
-
-
-    
   },
    methods: {
   show () {
@@ -249,7 +243,9 @@ export default {
 
 
 <style scoped>
-
+.v--modal-overlay {
+  background: rgba(0, 0, 0, 0.4);
+}
 .knockout{
     display: inline;
      height:100vh;
@@ -268,11 +264,10 @@ body {
   background: rgba(0, 0, 0, 0) linear-gradient(to right, rgb(255, 65, 108), rgb(255, 75, 43));
   margin:10px;
   border-radius:10px;
-  box-shadow:10px 10px 20px #333;
+  box-shadow:10px 10px 20px rgba(0, 0, 0, 0.4);
 }
 .tournament {
-  margin-top:100px;
-
+  margin-top:-25px;
   min-height: 300px;
   padding: 30px 0 0;
 }
@@ -280,7 +275,7 @@ body {
   font-size: 0;
   line-height: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-template-rows: minmax(100px, auto);
 
   align-items: stretch;
@@ -335,7 +330,7 @@ cursor:pointer;
   text-decoration: none;
   box-sizing: border-box;
   background-color:white;
-  box-shadow:3px 3px 10px black;
+  box-shadow:3px 3px 10px rgba(0, 0, 0, 0.4);
     border-radius:10px;
   display: flex;
   justify-content: center;
