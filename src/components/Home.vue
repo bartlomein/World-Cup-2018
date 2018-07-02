@@ -16,6 +16,7 @@
                  <img src="../assets/jersey-12.png" alt="" srcset="">
                  <img src="../assets/jersey-13.png" alt="" srcset="">
                  <img src="../assets/jersey-14.png" alt="" srcset="">
+                 <img src="../assets/jersey-15.png" alt="" srcset="">
 
              </div>
          <div class = "welcome"> 
@@ -69,7 +70,7 @@ padding:20px;
 border-radius:5px;
 box-shadow: 5px 5px 30px black;
 color:white;
-opacity: 0.97;
+opacity: 0.92;
 
 }
 .welcome h1{
@@ -85,15 +86,15 @@ opacity: 0.97;
 .jerseys{
   display: grid;
   grid-gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
-
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   max-width: 100%;
-
+    position:absolute;
   opacity: 0.6;
+  top:0;
   z-index: -1;
 }
 .jerseys img{
-    max-width:100%;
+    max-width:85%;
 
 
 }
