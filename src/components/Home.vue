@@ -62,7 +62,7 @@ background-size: cover;
 display:flex;
 justify-content: center;
 align-items: center;
-margin-top: 200px !important;
+margin-top: 140px !important;
 max-width: 70%;
 margin: 0 auto;
 padding:20px;
@@ -84,17 +84,16 @@ opacity: 0.97;
 }
 .jerseys{
   display: grid;
-  grid-gap: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
-  position: absolute;
+  grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+
   max-width: 100%;
-  top:0;
-  left: 750px;
+
   opacity: 0.6;
   z-index: -1;
 }
 .jerseys img{
-
+    max-width:100%;
 
 
 }

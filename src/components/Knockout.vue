@@ -495,15 +495,15 @@ cursor:pointer;
   justify-content: center;
   align-items: center;
   position: absolute;
-  max-width: 50%;
+
   top:0;
   left:0;
   opacity: 0.7;
   z-index: -1;
-  max-width:40%;
+  max-width:30%;
 }
 .jerseys img{
-width:30%;
+width:40%;
 }
 
 
