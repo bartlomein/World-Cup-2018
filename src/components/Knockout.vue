@@ -102,16 +102,16 @@
     <div class="tournament__round">
       <div class = "label"><h2>Semifinal</h2></div>
       <div class="tournament__match tournament__match" v-if="semi.matches[0]" @click="sendData(semi.matches[0]), show(),formatDate(match)">
-        <a class="tournament__match__team clickable" >{{eight.matches[0].team1.name}}</a>
-        <a class="tournament__match__team clickable" >{{eight.matches[0].team2.name}}</a>
+        <a class="tournament__match__team clickable" >{{semi.matches[0].team1.name}}</a>
+        <a class="tournament__match__team clickable" >{{semi.matches[0].team2.name}}</a>
       </div>
        <div class="tournament__match tournament__match" else>
         <a class="tournament__match__team" >TBD</a>
         <a class="tournament__match__team" >TBD</a>
       </div>
-      <div class="tournament__match tournament__match" v-if="eight.matches[1]" @click="sendData(semi.matches[1]), show(),formatDate(match)">
-        <a class="tournament__match__team clickable" >{{eight.matches[1].team1.name}}</a>
-        <a class="tournament__match__team clickable" >{{eight.matches[1].team2.name}}</a>
+      <div class="tournament__match tournament__match" v-if="semi.matches[1]" @click="sendData(semi.matches[1]), show(),formatDate(match)">
+        <a class="tournament__match__team clickable" >{{semi.matches[1].team1.name}}</a>
+        <a class="tournament__match__team clickable" >{{semi.matches[1].team2.name}}</a>
       </div>
        <div class="tournament__match tournament__match" else>
         <a class="tournament__match__team" >TBD</a>
@@ -180,6 +180,7 @@
       </div>
       <div v-if="match.score1p">
         <div class = "pk">
+          Penalties
           <div class="pk1">
             {{match.score1p}}
           </div>
