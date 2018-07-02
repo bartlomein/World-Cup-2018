@@ -41,9 +41,9 @@ background: linear-gradient(315deg, rgb(252, 0, 170), rgb(0, 219, 222));
 .title-header{
   position:absolute;
   top:5px;
-  font-family: 'IBM Plex Sans', sans-serif;
+
   border-radius:10px;
-  padding:10px 18px 10px 18px;
+  padding:10px 10px 10px 10px;
   max-width:400px;
   margin:0 auto;
   box-shadow: 5px 5px 20px gray;
@@ -60,15 +60,15 @@ h1{
 h2{
   margin:5px;
   font-weight:bold;
-    margin-top:20px;
+    margin-top:10px;
 
 }
 .title-header a{
   margin-left:5px;
   margin-right:5px;
 
-  padding:5px 12px 5px 12px; 
-color:#FF7796;
+  padding:5px 15px 5px 15px; 
+color:#02203E;
   text-decoration: none;
 
   background-color:snow;
@@ -84,7 +84,7 @@ color:#FF7796;
 
 .title-header a:hover{
 
-  border:3px solid pink;
+
 
 }
 @media screen and (max-width: 370px){
