@@ -1,6 +1,23 @@
 <template>
      <div class="knockout">
     <h1></h1>
+    <div class = "jerseys">
+                 <img src="../assets/jersey-1.png" alt="" srcset="">
+                 <img src="../assets/jersey-9.png" alt="" srcset="">
+                 <img src="../assets/jersey-8.png" alt="" srcset="">
+                 <img src="../assets/jersey-2.png" alt="" srcset="">
+                 <img src="../assets/jersey-3.png" alt="" srcset="">
+                 <img src="../assets/jersey-4.png" alt="" srcset="">
+                 <img src="../assets/jersey-5.png" alt="" srcset="">
+                 <img src="../assets/jersey-6.png" alt="" srcset="">
+                 <img src="../assets/jersey-7.png" alt="" srcset="">
+                 <img src="../assets/jersey-10.png" alt="" srcset="">
+                 <img src="../assets/jersey-11.png" alt="" srcset="">
+                 <img src="../assets/jersey-12.png" alt="" srcset="">
+                 <img src="../assets/jersey-13.png" alt="" srcset="">
+                 <img src="../assets/jersey-14.png" alt="" srcset="">
+                 <img src="../assets/jersey-15.png" alt="" srcset="">
+             </div>
 
     <div class="tournament">
   <!-- tournament logo -->
@@ -471,6 +488,21 @@ cursor:pointer;
 
 .pk2{
   text-align:right;
+}
+
+.jerseys{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  max-width: 50%;
+  top:0;
+  left:0;
+  opacity: 0.7;
+  z-index: -1;
+}
+.jerseys img{
+  width: 20%;;
 }
 
 
