@@ -500,10 +500,10 @@ cursor:pointer;
   left:0;
   opacity: 0.7;
   z-index: -1;
-  max-width:145%;
+  max-width:40%;
 }
 .jerseys img{
-
+width:30%;
 }
 
 
