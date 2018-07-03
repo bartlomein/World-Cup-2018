@@ -1,24 +1,7 @@
 <template>
      <div class="home page">
 
- <div class = "jerseys">
-                 <img src="../assets/jersey-1.png" alt="" srcset="">
-                 <img src="../assets/jersey-9.png" alt="" srcset="">
-                 <img src="../assets/jersey-8.png" alt="" srcset="">
-                 <img src="../assets/jersey-2.png" alt="" srcset="">
-                 <img src="../assets/jersey-3.png" alt="" srcset="">
-                 <img src="../assets/jersey-4.png" alt="" srcset="">
-                 <img src="../assets/jersey-5.png" alt="" srcset="">
-                 <img src="../assets/jersey-6.png" alt="" srcset="">
-                 <img src="../assets/jersey-7.png" alt="" srcset="">
-                 <img src="../assets/jersey-10.png" alt="" srcset="">
-                 <img src="../assets/jersey-11.png" alt="" srcset="">
-                 <img src="../assets/jersey-12.png" alt="" srcset="">
-                 <img src="../assets/jersey-13.png" alt="" srcset="">
-                 <img src="../assets/jersey-14.png" alt="" srcset="">
-                 <img src="../assets/jersey-15.png" alt="" srcset="">
 
-             </div>
          <div class = "welcome"> 
              
              <div class = "main-text">
@@ -63,7 +46,7 @@ background-size: cover;
 display:flex;
 justify-content: center;
 align-items: center;
-margin-top: 140px !important;
+margin-top: 200px !important;
 max-width: 70%;
 margin: 0 auto;
 padding:20px;
@@ -83,19 +66,8 @@ opacity: 0.92;
 .main-text a{
     color:white;
 }
-.jerseys{
-  display: grid;
-  grid-gap: 20px;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  max-width: 100%;
-    position:absolute;
-  opacity: 0.6;
-  top:0;
-  z-index: -1;
-}
-.jerseys img{
-    max-width:85%;
 
 
-}
+
+
 </style>

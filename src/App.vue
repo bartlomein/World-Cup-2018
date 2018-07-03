@@ -1,5 +1,23 @@
 <template>
   <div id="app">
+     <div class = "jerseys">
+                 <img src="./assets/jersey-1.png" alt="" srcset="">
+                 <img src="./assets/jersey-9.png" alt="" srcset="">
+                 <img src="./assets/jersey-8.png" alt="" srcset="">
+                 <img src="./assets/jersey-2.png" alt="" srcset="">
+                 <img src="./assets/jersey-3.png" alt="" srcset="">
+                 <img src="./assets/jersey-4.png" alt="" srcset="">
+                 <img src="./assets/jersey-5.png" alt="" srcset="">
+                 <img src="./assets/jersey-6.png" alt="" srcset="">
+                 <img src="./assets/jersey-7.png" alt="" srcset="">
+                 <img src="./assets/jersey-10.png" alt="" srcset="">
+                 <img src="./assets/jersey-11.png" alt="" srcset="">
+                 <img src="./assets/jersey-12.png" alt="" srcset="">
+                 <img src="./assets/jersey-13.png" alt="" srcset="">
+                 <img src="./assets/jersey-14.png" alt="" srcset="">
+                 <img src="./assets/jersey-15.png" alt="" srcset="">
+
+             </div>
     <div class = "title-header"><h1><router-link to="/">World Cup 2018</router-link><br> </h1><h2><router-link to="/group">Group</router-link><span> </span> <router-link to="/knockout">Knockout</router-link></h2></div>
 
 
@@ -106,8 +124,21 @@ color:#02203E;
   opacity: 0
 }
 
+.jerseys{
+  display: grid;
+  grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  max-width: 100%;
+    position:absolute;
+  opacity: 0.5;
+  top:0;
+  z-index: -1;
+}
+.jerseys img{
+    max-width:85%;
 
 
 
+}
 
 </style>
