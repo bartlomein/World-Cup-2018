@@ -105,7 +105,7 @@
         <a class="tournament__match__team clickable" >{{semi.matches[0].team1.name}}</a>
         <a class="tournament__match__team clickable" >{{semi.matches[0].team2.name}}</a>
       </div>
-       <div class="tournament__match tournament__match" else>
+       <div class="tournament__match tournament__match" v-else>
         <a class="tournament__match__team" >TBD</a>
         <a class="tournament__match__team" >TBD</a>
       </div>
@@ -113,7 +113,7 @@
         <a class="tournament__match__team clickable" >{{semi.matches[1].team1.name}}</a>
         <a class="tournament__match__team clickable" >{{semi.matches[1].team2.name}}</a>
       </div>
-       <div class="tournament__match tournament__match" else>
+       <div class="tournament__match tournament__match" v-else>
         <a class="tournament__match__team" >TBD</a>
         <a class="tournament__match__team" >TBD</a>
       </div>
@@ -126,7 +126,7 @@
         <a class="tournament__match__team clickable" >{{final.matches[0].team1.name}}</a>
         <a class="tournament__match__team clickable" >{{final.matches[0].team2.name}}</a>
       </div>
-       <div class="tournament__match tournament__match" else>
+       <div class="tournament__match tournament__match" v-else>
         <a class="tournament__match__team" >TBD</a>
         <a class="tournament__match__team" >TBD</a>
       </div>
@@ -242,6 +242,7 @@ export default {
    methods: {
   show () {
     this.$modal.show('detailview');
+    console.log(this.semi);
   },
   hide () {
     this.$modal.hide('detailview');
