@@ -135,9 +135,7 @@
     <!-- tournament__round winner -->
     <div class="tournament__round tournament__round--winner" v-if="final.matches[0]" @click="sendData(final.matches[0]), show(),formatDate(match)">
     <div class = "label"><h2>Champion</h2></div>
-    <div class="tournament__match" >
-        <a class="tournament__match__team" >{{final.matches[0].team1.name}}</a>
-      </div>
+
       <div class="tournament__match" v-if="final.matches[0].score1 > final.matches[0].score2">
         <a class="tournament__match__team" >{{final.matches[0].team1.name}}</a>
       </div>
